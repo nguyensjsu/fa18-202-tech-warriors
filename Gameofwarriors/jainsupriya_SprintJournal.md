@@ -5,7 +5,7 @@ Team Member Name
 
 Supriya Jain
 
-Sprint#1 - Week 1 - 11/4 - 11/10
+Sprint#1 - Week 1 - 11/2 - 11/8
 
 What I did since the last daily scrum:
 NA
@@ -24,7 +24,7 @@ What blockers do I have:
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
-Sprint#2 - Week 1 - 11/11 - 11/17
+Sprint#2 - Week 1 - 11/9 - 11/15
 
 What I did since the last daily scrum:
 
