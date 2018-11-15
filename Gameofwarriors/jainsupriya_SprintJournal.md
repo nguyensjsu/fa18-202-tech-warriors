@@ -20,6 +20,8 @@ What do I plan to do this week:
 
 What blockers do I have:
 -NA
+
+
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
 Sprint#2 - Week 1 - 11/11 - 11/17
