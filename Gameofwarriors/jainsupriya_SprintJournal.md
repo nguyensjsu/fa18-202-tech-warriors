@@ -40,3 +40,4 @@ What do I plan to do this week:
 4) Start implementing design pattern.
 
 What blockers do I have:
+-NA
