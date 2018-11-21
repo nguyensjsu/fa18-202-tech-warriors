@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=IWarriorObserver
+comment1.params=
+comment1.target=void\ eventUpdate()
+comment1.text=\n\ Key\ Event\ to\ Notify\ Observers\ \n\ @param\ numKeys\ Number\ of\ Digits\ So\ Far\n\ @param\ key\ \ \ \ \ Key/Digit\ Pressed\n
+numComments=2

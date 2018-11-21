@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ISoundEventHandler
+comment1.params=soundRequest
+comment1.target=void\ handleRequest(java.lang.String)
+comment2.params=next
+comment2.target=void\ setNext(ISoundEventHandler)
+numComments=3

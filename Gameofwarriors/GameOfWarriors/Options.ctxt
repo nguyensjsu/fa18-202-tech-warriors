@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Options
+comment1.params=option
+comment1.target=Options(java.lang.String)
+comment1.text=\n\ Constructor\n
+comment2.params=
+comment2.target=void\ imageLabel()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=cmd
+comment4.target=void\ setCommand(IMenuCommand)
+comment5.params=
+comment5.target=void\ invoke()
+comment6.params=
+comment6.target=java.lang.String\ getOption()
+numComments=7
