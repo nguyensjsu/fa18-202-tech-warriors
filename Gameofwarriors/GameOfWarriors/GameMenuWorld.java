@@ -12,7 +12,8 @@ public class GameMenuWorld extends World
     private PlayOption playOption ;
     private HelpOption helpOption ;
     private PlayCommand playCmd ;
-    private HelpCommand helpCmd ; 
+    private HelpCommand helpCmd ;
+    private Level level ;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,7 +21,8 @@ public class GameMenuWorld extends World
     public GameMenuWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1);
+        level = new Level();
         addObject(aladdin,getWidth()/2,getHeight()-aladdin.getImage().getHeight()/2);
         playOption  = new PlayOption("Play") ;
         helpOption  = new HelpOption("Help") ;
