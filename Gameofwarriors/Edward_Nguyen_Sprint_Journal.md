@@ -32,3 +32,18 @@ What do I plan to do this week:
 
 What blockers do I have:
 * NA
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Sprint#3 - Week 1 - 11/16 - 11/22
+
+What I did since the last daily scrum:
+* Brainstorm designs for game characters and images
+* Explore how to use strategy pattern
+
+What do I plan to do this week:
+* Begin creating different screens
+* Implement strategy pattern
+
+What blockers do I have:
+* Time
