@@ -1,17 +1,17 @@
 
-public interface IWarriorSubject {
+public interface IScoreSubject {
 	
 	    /**
 	     * Add Observer to Subscribers List
 	     * @param obj Observer Object
 	     */
-	    void attach( IWarriorObserver obj ) ;
+	    void attach( IScoreObserver obj ) ;
 
 	    /**
 	     * Remove Observer from Subscription
 	     * @param obj Observer Object
 	     */
-	    void removeObserver( IWarriorObserver obj ) ;
+	    void removeObserver( IScoreObserver obj ) ;
 
 	    /**
 	     * Trigger Events to Observers
