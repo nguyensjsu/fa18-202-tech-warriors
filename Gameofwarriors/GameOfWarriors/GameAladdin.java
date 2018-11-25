@@ -21,9 +21,6 @@ public class GameAladdin extends Actor implements IScoreSubject
     private ArrayList<IScoreObserver> scoreObserver = new ArrayList<IScoreObserver>() ;
     private ArrayList<LifeCount> lives = new ArrayList<LifeCount>() ;
     public String marioState ;
-    
-    
-    
     public GameAladdin()
     {
         myImage = getImage();
@@ -38,7 +35,8 @@ public class GameAladdin extends Actor implements IScoreSubject
     public void act() 
     {
         if(getOneIntersectingObject(Enemies.class)!= null){
-            Greenfoot.stop();    
+            die();
+            //Greenfoot.stop();    
         }
         checkKeys();
         checkFall();
@@ -128,11 +126,14 @@ public class GameAladdin extends Actor implements IScoreSubject
     }
     public void addNewLife()
     {
+        setMarioState("gotLife");
         
     }
     public void setMarioState(String marioStatus)
     {
         marioState = marioStatus;
+        notifyLifeObservers();
+        
     }
     public String getMarioState(){
         return marioState;
@@ -141,7 +142,7 @@ public class GameAladdin extends Actor implements IScoreSubject
      * Add Observer to Subscribers List
      * @param obj LifeCount Object
      */
-    public void attach( LifeCount obj ) 
+    public void attachLifeObserver( LifeCount obj ) 
     {
         lives.add(obj);
     }
@@ -150,7 +151,7 @@ public class GameAladdin extends Actor implements IScoreSubject
      * Remove Observer from Subscription
      * @param obj LifeCount Object
      */
-    public void removeObserver( LifeCount obj ) {
+    public void removeLifeObserver( LifeCount obj ) {
         lives.remove(obj);
     }
     /**
@@ -161,6 +162,10 @@ public class GameAladdin extends Actor implements IScoreSubject
         {
             obj.updateLife();
         }
+    }
+    public void die()
+    {  
+        setMarioState("dead");
     }
      
 

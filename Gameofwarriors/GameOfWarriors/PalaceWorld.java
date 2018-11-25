@@ -16,13 +16,11 @@ public class PalaceWorld extends World
     JumpBar jumpbar2 = new JumpBar();
     JumpBar jumpbar3 = new JumpBar();
     JumpBar jumpbar4 = new JumpBar();
-    
-    
     Jewel1 jewel1 = new Jewel1();
     Jewel1 jewel2 = new Jewel1();
-    Life lifeimg1 = new LifeCount();
-    Life lifeimg2 = new LifeCount();
-    Life lifeimg3 = new LifeCount();
+    LifeCount lifeimg1 = new LifeCount();
+    LifeCount lifeimg2 = new LifeCount();
+    LifeCount lifeimg3 = new LifeCount();
     Life life1 = new MovingLife();
     Score score = new Score(aladdin);
     JewelsCollected jc= new JewelsCollected(aladdin);
@@ -52,7 +50,7 @@ public class PalaceWorld extends World
         addObject(jewel1, 91, 26);
         addObject(lifeimg1, 160, 26);
         addObject(lifeimg2, 190, 26);
-        addObject(lifeimg3, 220, 26);
+        //addObject(lifeimg3, 220, 26);
         //addObject(jewel2, 652, 433);
         addObject(life1, 652, 433);
         addObject(score,330,22); //Add mario
@@ -62,5 +60,6 @@ public class PalaceWorld extends World
         addObject(new Jewel1(), 753,462);
         addObject(new Jewel1(), 900,150);
         addObject(new Jewel1(), 270,380);
+        aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
     }
 }
