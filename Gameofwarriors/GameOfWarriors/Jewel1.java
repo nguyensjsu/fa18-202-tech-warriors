@@ -15,32 +15,13 @@ public class Jewel1 extends Actor
     public void act() 
     {
         // Add your action code here.
-        Actor actor = getOneIntersectingObject(GameAladdin.class);
-        if(actor != null)
-        {
-            incrementScore();
-            //removeFromList();
-            decreaseCount();
-            removeFromWorld();
-            
-        }
+
     }    
     public Jewel1()
     {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/25;
-        int myNewWidth = (int)myImage.getWidth()/25;
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-        
 
     }
-    public Jewel1(int getX, int getY)
-    {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/20;
-        int myNewWidth = (int)myImage.getWidth()/20;
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-    }
+
     public void incrementScore()
     {
         PalaceWorld palace = (PalaceWorld)getWorld();

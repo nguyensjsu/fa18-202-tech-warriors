@@ -12,6 +12,7 @@ public class GameAladdin extends Actor implements IScoreSubject
  
     private int fallSpeed = 0;
     private int accelaration = 3;
+    private boolean gameStart = true;
     private int jumpStrength=7;
     GreenfootImage myImage = null;
     int remainingLife = 0;
@@ -73,8 +74,20 @@ public class GameAladdin extends Actor implements IScoreSubject
     } 
     public void fall()
     {
-        setLocation(getX(), getY()+fallSpeed);
-        fallSpeed = fallSpeed+accelaration;
+        
+        //System.out.println("hi");
+        if(gameStart)
+        {
+            setLocation(getX(), getY());
+            gameStart = false;
+            
+        }
+        else
+        {
+            
+            fallSpeed = fallSpeed+accelaration;
+            setLocation(getX(), getY()+fallSpeed);
+        }
     }
     public void checkFall()
     {

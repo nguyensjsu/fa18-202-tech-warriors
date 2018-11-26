@@ -11,7 +11,7 @@ public class PalaceWorld extends World
 {
 
     GameAladdin aladdin= new GameAladdin();
-    Jewel1 jewel1 = new Jewel1();//for score board
+    Jewel1 jewel1 = new PinkJewel();//for score board
     LifeCount lifeimg1 = new LifeCount();
     LifeCount lifeimg2 = new LifeCount();
     LifeCount lifeimg3 = new LifeCount();
@@ -82,15 +82,12 @@ public class PalaceWorld extends World
 
     public void populate()
     {
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        for(int i = 0 ; i< 7 ; i++)
+        {
+            addObject(new BlueJewel(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject(new PinkJewel(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            
+        }
+        
     }
 }
