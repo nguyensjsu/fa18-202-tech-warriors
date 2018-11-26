@@ -4,7 +4,7 @@ Team Member Name
 
 Priyanka Singhal
 
-Sprint#1 - Week 1 - 11/4 - 11/10
+Sprint#1 - Week 1 - 11/2 - 11/8
 
 What I did since the last daily scrum:
 - NA
@@ -19,7 +19,7 @@ What blockers do I have:
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
-Sprint#2 - Week 1 - 11/11 - 11/17
+Sprint#2 - Week 2 - 11/9 - 11/15
 
 What I did since the last daily scrum:
 - Explored greenfoot basic features
@@ -30,3 +30,19 @@ What do I plan to do this week:
 - Handle game key touch actions
 
 What blockers do I have:
+- finding sounds for different events
+
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Sprint#3 - Week 3 - 11/16 - 11/22
+
+What I did since the last daily scrum:
+- Identified different events and sounds
+- Implemented chain of responsibility for different sound events
+
+What do I plan to do this week:
+- Started implementation for key touch actions
+
+What blockers do I have:
+- NA
