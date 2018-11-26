@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=HitEnemyEventHandler
+comment0.text=\n\ Chain\ of\ responsibility\ pattern\n\ Handles\ Hit\ enemy\ sound\ event\n\ \n\ @Priyanka.Singhal\n\ @V1.0\n
+comment1.params=action
+comment1.target=void\ handleSoundEvent(java.lang.String)
+comment1.text=\n\ Handles\ sound\ event\ for\ various\ actions\n\ @param\ event\ action\n
+comment2.params=next
+comment2.target=void\ setNext(IEventSoundHandler)
+comment2.text=\n\ Sets\ the\ chain\ of\ responsibility\ to\ different\ handler\n\ @param\ next\ sound\ handler\n
+numComments=3
