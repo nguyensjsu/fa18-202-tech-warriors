@@ -27,22 +27,22 @@ public class Enemies extends Actor
         if (!moveRight)
         {
             setImage("enemyLeft1.png");
-            move(-2);
+            move(-1);
         }
         else
         {
             setImage("enemyRight.png");
-            move(2);
+            move(1);
         }
         if(this.getX() <= 240)
         {
-            move(2);
+            move(1);
             moveRight = true;
             setImage("enemyRight.png");
         }
         if(this.getX() >= 365)
         {
-            move(-2);
+            move(-1);
             moveRight = false;
             setImage("enemyLeft1.png");
         }
