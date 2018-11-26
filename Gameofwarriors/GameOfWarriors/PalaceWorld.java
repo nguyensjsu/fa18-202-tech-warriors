@@ -21,7 +21,8 @@ public class PalaceWorld extends World
     Level level = new Level(this);
     int jewelsonscreen = 10;
     int level_num;
-
+    //Start Sound
+    GreenfootSound startSound;
     /**
      * Constructor for objects of class PalaceWorld.
      * 
@@ -53,6 +54,9 @@ public class PalaceWorld extends World
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
         level_num = 0;
         //update_jewel_count();
+        //Game start sound
+        startSound = new GreenfootSound("startgame.mp3");
+        startSound.playLoop();
     }
 
     public void update_jewel_count()

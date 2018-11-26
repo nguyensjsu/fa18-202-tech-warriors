@@ -13,6 +13,8 @@ public class GameMenuWorld extends World
     private HelpOption helpOption ;
     private PlayCommand playCmd ;
     private HelpCommand helpCmd ;
+    //Start Sound
+    GreenfootSound background;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -51,7 +53,10 @@ public class GameMenuWorld extends World
                         }
                     }
               }
-              ) ;         
+              ) ;  
+        //Game background sound
+        background = new GreenfootSound("background.mp3");
+        background.playLoop();
     }
 
 }
