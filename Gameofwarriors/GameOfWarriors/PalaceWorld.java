@@ -52,22 +52,22 @@ public class PalaceWorld extends World
         aladdin.attach(jewelCollection);//attach game actor to update on score.
         populate();
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
-        level_num = 0;
+        //level_num = 0;
         //update_jewel_count();
         //Game start sound
-        startSound = new GreenfootSound("startgame.mp3");
-        startSound.playLoop();
+        //startSound = new GreenfootSound("startgame.mp3");
+        //startSound.playLoop();
     }
 
-    public void update_jewel_count()
+    /*public void update_jewel_count()
     {
         GreenfootImage image = getBackground();
         image.setColor(Color.WHITE);
         image.setFont(new Font("Trebuchet MS", true, true, 20));
         image.drawString("Jewels: " +jewelsonscreen, 400, 25);
-    }
+    }*/
 
-    public void decrease_jewels()
+   /* public void decrease_jewels()
     {
         if(jewelsonscreen > 0)
             jewelsonscreen--;
@@ -78,7 +78,7 @@ public class PalaceWorld extends World
             level.setLevel();
             level.displayLevel();
         }
-    }
+    }*/
 
     public void populate()
     {

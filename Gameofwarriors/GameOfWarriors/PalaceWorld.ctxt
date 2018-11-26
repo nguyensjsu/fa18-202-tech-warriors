@@ -5,9 +5,6 @@ comment1.params=
 comment1.target=PalaceWorld()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ PalaceWorld.\n\ \n
 comment2.params=
-comment2.target=void\ update_jewel_count()
-comment3.params=
-comment3.target=void\ decrease_jewels()
-comment4.params=
-comment4.target=void\ populate()
-numComments=5
+comment2.target=void\ populate()
+comment2.text=\ public\ void\ decrease_jewels()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ if(jewelsonscreen\ >\ 0)\n\ \ \ \ \ \ \ \ \ \ \ \ jewelsonscreen--;\n\ \ \ \ \ \ \ \ if(jewelsonscreen\ \=\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ level_num++;\n\ \ \ \ \ \ \ \ \ \ \ \ jewelsonscreen\ \=\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ populate();\n\ \ \ \ \ \ \ \ \ \ \ \ level.setLevel();\n\ \ \ \ \ \ \ \ \ \ \ \ level.displayLevel();\n\ \ \ \ \ \ \ \ }\n}
+numComments=3

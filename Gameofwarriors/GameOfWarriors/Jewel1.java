@@ -40,7 +40,7 @@ public class Jewel1 extends Actor
 
     public void decreaseCount(){
         PalaceWorld palace = (PalaceWorld)getWorld();  
-        palace.decrease_jewels();
+        //palace.decrease_jewels();
         //palace.update_jewel_count();
     }
   

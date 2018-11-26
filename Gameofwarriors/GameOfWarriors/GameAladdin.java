@@ -21,7 +21,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     private String scoreState;
     private ArrayList<IScoreObserver> scoreObserver = new ArrayList<IScoreObserver>() ;
     private ArrayList<LifeCount> lives = new ArrayList<LifeCount>() ;
-    public String marioState ;
+    public String aladdinState ;
     public GameAladdin()
     {
         myImage = getImage();
@@ -139,17 +139,17 @@ public class GameAladdin extends Actor implements IScoreSubject
     }
     public void addNewLife()
     {
-        setMarioState("gotLife");
+        setAladdinState("gotLife");
         
     }
-    public void setMarioState(String marioStatus)
+    public void setAladdinState(String marioStatus)
     {
-        marioState = marioStatus;
+        aladdinState = marioStatus;
         notifyLifeObservers();
         
     }
-    public String getMarioState(){
-        return marioState;
+    public String getAladdinState(){
+        return aladdinState;
     }
     /**
      * Add Observer to Subscribers List
@@ -178,7 +178,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     }
     public void die()
     {  
-        setMarioState("dead");
+        setAladdinState("dead");
     }
      
 

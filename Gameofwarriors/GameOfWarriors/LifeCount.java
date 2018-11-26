@@ -24,7 +24,7 @@ public class LifeCount extends Life
     {
         GameAladdin aladdin = (GameAladdin)getWorld().getObjects(GameAladdin.class).get(0);
         PalaceWorld palace = (PalaceWorld)getWorld();
-        state = palace.aladdin.getMarioState();
+        state = palace.aladdin.getAladdinState();
         
         
         if(state =="dead"){
