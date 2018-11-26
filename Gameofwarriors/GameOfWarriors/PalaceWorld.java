@@ -9,28 +9,15 @@ import java.util.ArrayList;
  */
 public class PalaceWorld extends World
 {
-    Enemies e =new Enemies();
+
     GameAladdin aladdin= new GameAladdin();
-    JumpBar jumpbar = new JumpBar();
-    JumpBar jumpbar1 = new JumpBar();
-    JumpBar jumpbar2 = new JumpBar();
-    JumpBar jumpbar3 = new JumpBar();
-    JumpBar jumpbar4 = new JumpBar();
-    Jewel1 jewel1 = new Jewel1();
-    Jewel1 jewel2 = new Jewel1();
+    Jewel1 jewel1 = new Jewel1();//for score board
     LifeCount lifeimg1 = new LifeCount();
     LifeCount lifeimg2 = new LifeCount();
     LifeCount lifeimg3 = new LifeCount();
     Life life1 = new MovingLife();
     Score score = new Score(aladdin);
-    JewelsCollected jc= new JewelsCollected(aladdin);
-    
- 
-    private List<JewelsCollection> jewels = new ArrayList<JewelsCollection>();//jewels list
-    public List<JewelsCollection> getJewels()
-    {
-        return jewels;
-    }
+    JewelsCollected jewelCollection= new JewelsCollected(aladdin);
 
     /**
      * Constructor for objects of class PalaceWorld.
@@ -39,27 +26,36 @@ public class PalaceWorld extends World
     public PalaceWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1200, 750, 1);
-        addObject(jumpbar, 300, 600);
-        addObject(jumpbar1, 640, 500);
-        addObject(jumpbar2, 410, 340);
-        addObject(jumpbar3, 540, 140);
-        addObject(jumpbar4, 880, 300);
-        addObject(aladdin, 117,736);
-        addObject(e, 413, 518);
-        addObject(jewel1, 91, 26);
-        addObject(lifeimg1, 160, 26);
-        addObject(lifeimg2, 190, 26);
-        //addObject(lifeimg3, 220, 26);
-        //addObject(jewel2, 652, 433);
-        addObject(life1, 652, 433);
-        addObject(score,330,22); //Add mario
-        aladdin.attach(score);//attach game actor to update on score.
-        addObject(jc, 127,23);
-        aladdin.attach(jc);//attach game actor to update on score.
-        addObject(new Jewel1(), 753,462);
-        addObject(new Jewel1(), 900,150);
-        addObject(new Jewel1(), 270,380);
+        super(1153, 800, 1);
+        addObject(new JumpBar(), 300, 600);
+        addObject(new JumpBar(), 640, 500);
+        addObject(new JumpBar(), 410, 340);
+        addObject(new JumpBar(), 540, 140);
+        addObject(new JumpBar(), 880, 300);
+        addObject(aladdin, 94,737);
+        addObject(new Enemies(), 345, 540);
+        addObject(life1, 652, 433);//moving life for collection
+        //score board
+        addObject(jewel1, 30, 25);
+        addObject(jewelCollection, 60,25);
+        addObject(lifeimg1, 90, 25);
+        addObject(lifeimg2, 120, 25);
+        addObject(lifeimg3, 150, 26);
+        
+        addObject(score,270,26); 
+        
+        aladdin.attach(score);//attach game actor to update on score.     
+        aladdin.attach(jewelCollection);//attach game actor to update on score.
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
     }
 }

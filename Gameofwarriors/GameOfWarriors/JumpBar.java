@@ -15,5 +15,13 @@ public class JumpBar extends Actor
     public void act() 
     {
         // Add your action code here.
+        
     }    
+    public JumpBar()
+    {
+        GreenfootImage myImage = getImage();
+        int myNewHeight = (int)myImage.getHeight()/2;
+        int myNewWidth = (int)myImage.getWidth()/2;
+        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.   
+    }
 }

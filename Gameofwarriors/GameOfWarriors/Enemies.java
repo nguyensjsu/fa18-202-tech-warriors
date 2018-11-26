@@ -12,8 +12,8 @@ public class Enemies extends Actor
     public Enemies()
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/12;
-        int myNewWidth = (int)myImage.getWidth()/12;
+        int myNewHeight = (int)myImage.getHeight()/15;
+        int myNewWidth = (int)myImage.getWidth()/15;
         myImage.scale(myNewWidth,myNewHeight);
     }
         

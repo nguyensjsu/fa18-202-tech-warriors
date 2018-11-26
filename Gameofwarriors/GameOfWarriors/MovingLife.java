@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -17,7 +18,8 @@ public class MovingLife extends Life
         // Add your action code here.
              // Add your action code here.
         move(3);
-        turn(2);
+        randomTurn();
+        turnAtEdge();
         Actor actor = getOneIntersectingObject(GameAladdin.class);
         if (actor != null) 
         {
@@ -34,5 +36,18 @@ public class MovingLife extends Life
 
     public void removefromWorld(){
         getWorld().removeObject(this);
+    }
+    public void randomTurn()
+    {
+        if(Greenfoot.getRandomNumber (100)<10)
+            turn(Greenfoot.getRandomNumber(40)-20);
+    }
+     /**
+     * if we reach at edge of the world turn little bit
+     */   
+    public void turnAtEdge()
+    {
+       if(isAtEdge())
+       turn(3);
     }
 }

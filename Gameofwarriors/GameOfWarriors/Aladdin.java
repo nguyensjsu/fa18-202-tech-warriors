@@ -11,8 +11,8 @@ public class Aladdin extends Actor
     public Aladdin()
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()*3/4;
-        int myNewWidth = (int)myImage.getWidth()*3/4;
+        int myNewHeight = (int)myImage.getHeight();
+        int myNewWidth = (int)myImage.getWidth();
         myImage.scale(myNewWidth,myNewHeight);
     }
     /**

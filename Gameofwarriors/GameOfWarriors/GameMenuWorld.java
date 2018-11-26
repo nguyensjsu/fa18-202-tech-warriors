@@ -21,9 +21,9 @@ public class GameMenuWorld extends World
     public GameMenuWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(1153, 800, 1);
         level = new Level();
-        addObject(aladdin,getWidth()/2,getHeight()-aladdin.getImage().getHeight()/2);
+        addObject(aladdin,1050, 600);
         playOption  = new PlayOption("Play") ;
         helpOption  = new HelpOption("Help") ;
         playCmd = new PlayCommand();

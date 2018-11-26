@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LifeCount extends Life
 {
-    public int lifeCount = 2;
+    public int lifeCount = 3;
     public String state= "";
 
     /**
@@ -25,23 +25,27 @@ public class LifeCount extends Life
         GameAladdin aladdin = (GameAladdin)getWorld().getObjects(GameAladdin.class).get(0);
         PalaceWorld palace = (PalaceWorld)getWorld();
         state = palace.aladdin.getMarioState();
-    
+        
+        
         if(state =="dead"){
             if(lifeCount ==3)
             {
-                getWorld().removeObjects(getWorld().getObjectsAt(220, 26,LifeCount.class));
+                
                 lifeCount--;
+                getWorld().removeObjects(getWorld().getObjectsAt(150, 25,LifeCount.class));
+                
             }
              else if(lifeCount ==2)
             {
-                getWorld().removeObjects(getWorld().getObjectsAt(190, 26,LifeCount.class));
                 lifeCount--;
+                getWorld().removeObjects(getWorld().getObjectsAt(120, 25,LifeCount.class));
+                
             } 
              else  if(lifeCount ==1)
             {
                 // game over sound
-                getWorld().removeObjects(getWorld().getObjectsAt( 160, 26,LifeCount.class));
                 lifeCount--;
+                getWorld().removeObjects(getWorld().getObjectsAt( 90, 25,LifeCount.class));             
                 Greenfoot.stop();   
             }                
             
@@ -51,13 +55,12 @@ public class LifeCount extends Life
             
             if(lifeCount ==2)
             {
-                getWorld().addObject(lifecount,220, 26);
+                getWorld().addObject(lifecount,150, 25);
                 lifeCount++;
-                System.out.println("here");
             } 
             else if (lifeCount ==1)
             {
-                getWorld().addObject(lifecount,190, 26 );
+                getWorld().addObject(lifecount,120, 25 );
                 lifeCount++;               
                 
             }

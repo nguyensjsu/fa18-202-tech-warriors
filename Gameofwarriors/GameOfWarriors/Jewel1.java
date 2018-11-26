@@ -27,8 +27,8 @@ public class Jewel1 extends Actor
     public Jewel1()
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/23;
-        int myNewWidth = (int)myImage.getWidth()/23;
+        int myNewHeight = (int)myImage.getHeight()/25;
+        int myNewWidth = (int)myImage.getWidth()/25;
         myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
         
 

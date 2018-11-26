@@ -11,7 +11,7 @@ public class GameAladdin extends Actor implements IScoreSubject
 {
  
     private int fallSpeed = 0;
-    private int accelaration = 2;
+    private int accelaration = 3;
     private int jumpStrength=7;
     GreenfootImage myImage = null;
     int remainingLife = 0;
@@ -36,7 +36,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     {
         if(getOneIntersectingObject(Enemies.class)!= null){
             die();
-            //Greenfoot.stop();    
+            Greenfoot.stop();    
         }
         checkKeys();
         checkFall();
