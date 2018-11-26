@@ -10,15 +10,18 @@ public class Level extends Actor
 {
     // instance variables - replace the example below with your own
     private int level;
+    private PalaceWorld world;    
     private IGameLevelStrategy level_strat;
 
     /**
      * Constructor for objects of class Level
      */
-    public Level()
+    public Level(PalaceWorld world)
     {
-        level = 1;
-        level_strat = new Level1Strategy();
+        level = 0;
+        this.world = world;
+        level_strat = new Level0Strategy(this.world);
+        //this.world.addObject(new Enemies(), 800, 200);
     }
 
     /**
@@ -27,9 +30,13 @@ public class Level extends Actor
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void setLevel(IGameLevelStrategy level)
+    public void setLevel()
     {
-        level_strat = level;
+        level++;
+        switch(level){
+            case 1: level_strat = new Level1Strategy(world);
+                    break;
+        }
     }
     
     /**

@@ -18,6 +18,9 @@ public class PalaceWorld extends World
     Life life1 = new MovingLife();
     Score score = new Score(aladdin);
     JewelsCollected jewelCollection= new JewelsCollected(aladdin);
+    Level level = new Level(this);
+    int jewelsonscreen = 10;
+    int level_num;
 
     /**
      * Constructor for objects of class PalaceWorld.
@@ -41,21 +44,49 @@ public class PalaceWorld extends World
         addObject(lifeimg1, 90, 25);
         addObject(lifeimg2, 120, 25);
         addObject(lifeimg3, 150, 26);
-        
+
         addObject(score,270,26); 
-        
+
         aladdin.attach(score);//attach game actor to update on score.     
         aladdin.attach(jewelCollection);//attach game actor to update on score.
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        populate();
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
+        level_num = 0;
+        //update_jewel_count();
+    }
+
+    public void update_jewel_count()
+    {
+        GreenfootImage image = getBackground();
+        image.setColor(Color.WHITE);
+        image.setFont(new Font("Trebuchet MS", true, true, 20));
+        image.drawString("Jewels: " +jewelsonscreen, 400, 25);
+    }
+
+    public void decrease_jewels()
+    {
+        if(jewelsonscreen > 0)
+            jewelsonscreen--;
+        if(jewelsonscreen == 0){
+            level_num++;
+            jewelsonscreen = 10;            
+            populate();
+            level.setLevel();
+            level.displayLevel();
+        }
+    }
+
+    public void populate()
+    {
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+        addObject(new Jewel1(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
     }
 }

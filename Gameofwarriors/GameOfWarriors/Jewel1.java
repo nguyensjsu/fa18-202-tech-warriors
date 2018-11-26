@@ -20,6 +20,7 @@ public class Jewel1 extends Actor
         {
             incrementScore();
             //removeFromList();
+            decreaseCount();
             removeFromWorld();
             
         }
@@ -54,6 +55,12 @@ public class Jewel1 extends Actor
     
    public void removeFromWorld(){
         getWorld().removeObject(this);
+    }
+
+    public void decreaseCount(){
+        PalaceWorld palace = (PalaceWorld)getWorld();  
+        palace.decrease_jewels();
+        //palace.update_jewel_count();
     }
   
 }
