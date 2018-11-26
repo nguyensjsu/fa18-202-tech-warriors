@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemies extends Actor
 {
     private int turnSpeed = 2;
+    private boolean moveRight = false;
     public Enemies()
     {
         GreenfootImage myImage = getImage();
@@ -23,14 +24,20 @@ public class Enemies extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-        
-       /* if(this.getX()==300)
+        if (!moveRight)
+            move(-2);
+        else
+            move(2);
+        if(this.getX() <= 240)
         {
             move(2);
+            moveRight = true;
         }
-        else
-        move(-2);*/
+        if(this.getX() >= 365)
+        {
+            move(-2);
+            moveRight = false;
+        }
        //onJumpBar();
     }  
         public void onJumpBar()
