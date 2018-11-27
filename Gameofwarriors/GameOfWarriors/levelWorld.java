@@ -6,50 +6,50 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GameMenuWorld extends World 
+public class levelWorld extends World 
 {
     Aladdin aladdin = new Aladdin();
-    private PlayOption playOption ;
-    private HelpOption helpOption ;
-    private PlayCommand playCmd ;
-    private HelpCommand helpCmd ;
+    private EasyOption easyOption ;
+    private MediumOption mediumOption ;
+    private EasyOptionCmd easyCmd ;
+    private MediumOptionCmd mediumCmd ;
     //Start Sound
     GreenfootSound background;
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public GameMenuWorld()
+    public levelWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1153, 800, 1);
+        super(1100, 800, 1);
         addObject(aladdin,1050, 600);
-        playOption  = new PlayOption("Play") ;
-        helpOption  = new HelpOption("Help") ;
-        playCmd = new PlayCommand();
-        addObject(playOption,100,100);
-        helpCmd = new HelpCommand();
-        addObject(helpOption,100,300);
-        playOption.setCommand(playCmd);
-        playCmd.setReceiver(
+        easyOption  = new EasyOption("Easy") ;
+        mediumOption  = new MediumOption("Medium") ;
+        easyCmd = new EasyOptionCmd();
+        addObject(easyOption,620,200);
+        mediumCmd = new MediumOptionCmd();
+        addObject(mediumOption,620,500);
+        easyOption.setCommand(easyCmd);
+        easyCmd.setReceiver(
                 new IMenuReceiver() {
                     /** Command Action */
                     public void doAction() {
-                        if(Greenfoot.mouseClicked(playOption)){
-                            World levelworld = new levelWorld();
-                            Greenfoot.setWorld(levelworld);
+                        if(Greenfoot.mouseClicked(easyOption)){
+                            World palaceWorld = new PalaceWorld();
+                            Greenfoot.setWorld(palaceWorld);
                         }
                     }
               }
               ) ; 
-        helpOption.setCommand(helpCmd);      
-        helpCmd.setReceiver(
+        mediumOption.setCommand(mediumCmd);      
+        mediumCmd.setReceiver(
                 new IMenuReceiver() {
                     /** Command Action */
                     public void doAction() {
-                        if(Greenfoot.mouseClicked(helpOption)){
-                            World helpWorld = new HelpWorld();
-                            Greenfoot.setWorld(helpWorld);
+                        if(Greenfoot.mouseClicked(mediumOption)){
+                            World palaceWorld2 = new PalaceWorld2();
+                            Greenfoot.setWorld(palaceWorld2);
                         }
                     }
               }
