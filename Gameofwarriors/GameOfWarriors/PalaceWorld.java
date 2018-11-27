@@ -11,16 +11,16 @@ public class PalaceWorld extends World
 {
 
     GameAladdin aladdin= new GameAladdin();
-    Jewel1 jewel1 = new PinkJewel();//for score board
+    int level_num = 0; 
+    Jewel1 jewel1 = new PinkJewel(level_num);//for score board
     LifeCount lifeimg1 = new LifeCount();
     LifeCount lifeimg2 = new LifeCount();
     LifeCount lifeimg3 = new LifeCount();
     Life life1 = new MovingLife();
-    Score score = new Score(aladdin);
-    JewelsCollected jewelCollection= new JewelsCollected(aladdin);
+    Score score = new Score(aladdin, level_num);
+    JewelsCollected jewelCollection= new JewelsCollected(aladdin);   
     Level level = new Level(this);
-    int jewelsonscreen = 10;
-    int level_num;
+    int jewelsonscreen = 14;
     //Start Sound
     GreenfootSound startSound;
     /**
@@ -31,13 +31,7 @@ public class PalaceWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
-        addObject(new JumpBar(), 300, 600);
-        addObject(new JumpBar(), 640, 500);
-        addObject(new JumpBar(), 410, 340);
-        addObject(new JumpBar(), 540, 140);
-        addObject(new JumpBar(), 880, 300);
         addObject(aladdin, 94,737);
-        addObject(new Enemies(), 345, 540);
         addObject(life1, 652, 433);//moving life for collection
         //score board
         addObject(jewel1, 30, 25);
@@ -52,7 +46,9 @@ public class PalaceWorld extends World
         aladdin.attach(jewelCollection);//attach game actor to update on score.
         populate();
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
-        //level_num = 0;
+        level.displayLevel();
+
+
         //update_jewel_count();
         //Game start sound
         //startSound = new GreenfootSound("startgame.mp3");
@@ -67,25 +63,32 @@ public class PalaceWorld extends World
         image.drawString("Jewels: " +jewelsonscreen, 400, 25);
     }*/
 
-   /* public void decrease_jewels()
+    public void decrease_jewels()
     {
         if(jewelsonscreen > 0)
             jewelsonscreen--;
         if(jewelsonscreen == 0){
-            level_num++;
-            jewelsonscreen = 10;            
-            populate();
-            level.setLevel();
-            level.displayLevel();
+           jewel1.setlevel(1);
+           score.setlevel(1);
+           nextLevel();
         }
-    }*/
+    }
+
+    public void nextLevel()
+    {
+        level_num++;
+        World palaceWorld2 = new PalaceWorld2(this);
+        Greenfoot.setWorld(palaceWorld2);
+        //level.setLevel();
+        //level.displayLevel();
+    }
 
     public void populate()
     {
         for(int i = 0 ; i< 7 ; i++)
         {
-            addObject(new BlueJewel(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject(new PinkJewel(), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             
         }
         

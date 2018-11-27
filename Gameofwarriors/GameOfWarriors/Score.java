@@ -11,8 +11,10 @@ public class Score extends Actor implements IScoreObserver
     private int totalScore = 0;
     private String jewelName;
     private GameAladdin alladin;
-    public Score(GameAladdin subject)
+    private int level_num;
+    public Score(GameAladdin subject, int x)
     {
+        level_num = x;
         alladin = subject;
         setImage(new GreenfootImage(200,30));
         eventUpdate();
@@ -44,13 +46,25 @@ public class Score extends Actor implements IScoreObserver
     }
     public void updateScore()
     {
-        PalaceWorld palace =(PalaceWorld)getWorld();
-        jewelName = palace.aladdin.getScoreState();
+        if(level_num == 0){
+           PalaceWorld palace =(PalaceWorld)getWorld();
+           jewelName = palace.aladdin.getScoreState();
         
-        if(jewelName == "PinkJewel" || jewelName == "BlueJewel" )
-            addScoreForJewel1();
+           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" )
+              addScoreForJewel1();
+        }
+        else if(level_num == 1){
+           PalaceWorld2 palace =(PalaceWorld2)getWorld();
+           jewelName = palace.aladdin.getScoreState();
+        
+           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" )
+              addScoreForJewel1();            
+        }
     
     }
+    public void setlevel(int x){
+        level_num = x;
+    } 
     
     
     

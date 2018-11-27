@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class PinkJewel extends Jewel1
 {
+
+    int level_num;
+
     /**
      * Act - do whatever the Jewel2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,20 +20,24 @@ public class PinkJewel extends Jewel1
          Actor actor = getOneIntersectingObject(GameAladdin.class);
         if(actor != null)
         {
-            incrementScore();
+            incrementScore(level_num);
             //removeFromList();
-            decreaseCount();
+            decreaseCount(level_num);
             removeFromWorld();
             
         }       // Add your action code here.
     }   
-    public PinkJewel()
+    public PinkJewel(int x)
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/10;
         int myNewWidth = (int)myImage.getWidth()/10;
         myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-        
+        level_num = x;
 
     }
+
+    public void setlevel(int x){
+        level_num = x;
+    } 
 }

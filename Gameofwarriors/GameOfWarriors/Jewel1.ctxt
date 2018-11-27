@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Jewel1
-comment0.text=\n\ Write\ a\ description\ of\ class\ Jewel1\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Jewel1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Jewel1\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Jewel1\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=Jewel1()
-comment3.params=
-comment3.target=void\ incrementScore()
+comment3.params=x
+comment3.target=void\ incrementScore(int)
 comment4.params=
 comment4.target=void\ removeFromWorld()
-comment4.text=\ public\ void\ removeFromList()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ PalaceWorld\ palace\ \=\ (PalaceWorld)getWorld();\n\ \ \ \ \ \ \ \ palace.getJewels().remove(this);\n}
-comment5.params=
-comment5.target=void\ decreaseCount()
+comment4.text=\ public\ void\ removeFromList()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ PalaceWorld\ palace\ \=\ (PalaceWorld)getWorld();\r\n\ \ \ \ \ \ \ \ palace.getJewels().remove(this);\r\n}
+comment5.params=x
+comment5.target=void\ decreaseCount(int)
 numComments=6

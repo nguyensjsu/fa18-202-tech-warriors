@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.target=PalaceWorld
-comment0.text=\n\ Write\ a\ description\ of\ class\ PalaceWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PalaceWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=PalaceWorld()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ PalaceWorld.\n\ \n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ PalaceWorld.\r\n\ \r\n
 comment2.params=
-comment2.target=void\ populate()
-comment2.text=\ public\ void\ decrease_jewels()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ if(jewelsonscreen\ >\ 0)\n\ \ \ \ \ \ \ \ \ \ \ \ jewelsonscreen--;\n\ \ \ \ \ \ \ \ if(jewelsonscreen\ \=\=\ 0){\n\ \ \ \ \ \ \ \ \ \ \ \ level_num++;\n\ \ \ \ \ \ \ \ \ \ \ \ jewelsonscreen\ \=\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ populate();\n\ \ \ \ \ \ \ \ \ \ \ \ level.setLevel();\n\ \ \ \ \ \ \ \ \ \ \ \ level.displayLevel();\n\ \ \ \ \ \ \ \ }\n}
-numComments=3
+comment2.target=void\ decrease_jewels()
+comment2.text=public\ void\ update_jewel_count()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ GreenfootImage\ image\ \=\ getBackground();\r\n\ \ \ \ \ \ \ \ image.setColor(Color.WHITE);\r\n\ \ \ \ \ \ \ \ image.setFont(new\ Font("Trebuchet\ MS",\ true,\ true,\ 20));\r\n\ \ \ \ \ \ \ \ image.drawString("Jewels\:\ "\ +jewelsonscreen,\ 400,\ 25);\r\n}
+comment3.params=
+comment3.target=void\ nextLevel()
+comment4.params=
+comment4.target=void\ populate()
+numComments=5

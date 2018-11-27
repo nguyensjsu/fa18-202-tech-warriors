@@ -9,9 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Level1Strategy extends Actor implements IGameLevelStrategy
 {
     // instance variables - replace the example below with your own
-    private PalaceWorld world;    
+    private PalaceWorld2 world;    
 
-    public Level1Strategy(PalaceWorld world)
+    public Level1Strategy(PalaceWorld2 world)
     {
         this.world = world;
         //this.world.addObject(new Enemies(), 800, 200);

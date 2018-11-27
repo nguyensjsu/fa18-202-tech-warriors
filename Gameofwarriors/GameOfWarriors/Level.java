@@ -9,8 +9,9 @@ import java.util.List;
 public class Level extends Actor
 {
     // instance variables - replace the example below with your own
-    private int level;
-    private PalaceWorld world;    
+    private int level_num;
+    private PalaceWorld world1;
+    private PalaceWorld2 world2;    
     private IGameLevelStrategy level_strat;
 
     /**
@@ -18,10 +19,21 @@ public class Level extends Actor
      */
     public Level(PalaceWorld world)
     {
-        level = 0;
-        this.world = world;
-        level_strat = new Level0Strategy(this.world);
-        //this.world.addObject(new Enemies(), 800, 200);
+           world1 = world;
+           level_strat = new Level0Strategy(world1);
+           //this.world.addObject(new Enemies(), 800, 200);
+        
+    }
+
+    /**
+     * Constructor for objects of class Level
+     */
+    public Level(PalaceWorld2 world)
+    {
+           world2 = world;
+           level_strat = new Level1Strategy(world2);
+           //this.world.addObject(new Enemies(), 800, 200);
+        
     }
 
     /**
@@ -30,14 +42,14 @@ public class Level extends Actor
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void setLevel()
+    /*public void setLevel()
     {
         level++;
         switch(level){
             case 1: level_strat = new Level1Strategy(world);
                     break;
         }
-    }
+    }*/
     
     /**
      * An example of a method - replace this comment with your own

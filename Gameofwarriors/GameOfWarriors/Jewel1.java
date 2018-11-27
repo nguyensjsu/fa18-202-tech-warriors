@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Jewel1 extends Actor
 {
+    int level_num;
+
     /**
      * Act - do whatever the Jewel1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,11 +24,18 @@ public class Jewel1 extends Actor
 
     }
 
-    public void incrementScore()
+    public void incrementScore(int x)
     {
-        PalaceWorld palace = (PalaceWorld)getWorld();
-        palace.aladdin.jewelsCollected++;
-        palace.aladdin.setScoreState(this.getClass().getName());
+        if(x == 0) {
+            PalaceWorld palace = (PalaceWorld)getWorld();
+            palace.aladdin.jewelsCollected++;
+            palace.aladdin.setScoreState(this.getClass().getName());
+        }
+        else if(x == 1) {
+            PalaceWorld2 palace = (PalaceWorld2)getWorld();
+            palace.aladdin.jewelsCollected++;
+            palace.aladdin.setScoreState(this.getClass().getName());
+        }
     }
    /* public void removeFromList()
     {
@@ -38,10 +47,19 @@ public class Jewel1 extends Actor
         getWorld().removeObject(this);
     }
 
-    public void decreaseCount(){
-        PalaceWorld palace = (PalaceWorld)getWorld();  
-        //palace.decrease_jewels();
+    public void decreaseCount(int x){
+        if(x == 0){ 
+            PalaceWorld palace = (PalaceWorld)getWorld();
+            palace.decrease_jewels();
+        }
+        else if(x == 1){
+            PalaceWorld2 palace = (PalaceWorld2)getWorld();
+            palace.decrease_jewels(); 
+        }
         //palace.update_jewel_count();
     }
-  
+    
+    public void setlevel(int x){
+        level_num = x;
+    }  
 }

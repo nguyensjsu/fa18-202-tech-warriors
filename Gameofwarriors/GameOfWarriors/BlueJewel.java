@@ -8,8 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BlueJewel extends Jewel1
 {
-    public BlueJewel()
+
+    int level_num;
+
+    public BlueJewel(int x)
     {
+        level_num = x;
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/25;
         int myNewWidth = (int)myImage.getWidth()/25;
@@ -27,11 +31,15 @@ public class BlueJewel extends Jewel1
         Actor actor = getOneIntersectingObject(GameAladdin.class);
         if(actor != null)
         {
-            incrementScore();
+            incrementScore(level_num);
             //removeFromList();
-            decreaseCount();
+            decreaseCount(level_num);
             removeFromWorld();
             
         }        // Add your action code here.
+    }
+
+    public void setlevel(int x){
+        level_num = x;
     }    
 }
