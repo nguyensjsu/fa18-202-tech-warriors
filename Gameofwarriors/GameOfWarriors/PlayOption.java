@@ -7,8 +7,8 @@ public class PlayOption extends Options implements IMenuInvoker {
     {
         super(option);
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/6;
-        int myNewWidth = (int)myImage.getWidth()/6;
+        int myNewHeight = (int)myImage.getHeight();
+        int myNewWidth = (int)myImage.getWidth();
         myImage.scale(myNewWidth,myNewHeight);
     }
 

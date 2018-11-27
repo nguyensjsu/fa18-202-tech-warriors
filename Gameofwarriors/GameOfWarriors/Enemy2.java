@@ -12,10 +12,7 @@ public class Enemy2 extends Enemies implements IEnemy
     private boolean moveRight = false;
     public Enemy2()
     {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/15;
-        int myNewWidth = (int)myImage.getWidth()/15;
-        myImage.scale(myNewWidth,myNewHeight);
+
     }
       
     /**
@@ -26,25 +23,25 @@ public class Enemy2 extends Enemies implements IEnemy
     {
         if (!moveRight)
         {
-            setImage("enemyLeft1.png");
+            setImage("enemy2left.png");
             move(-1);
         }
         else
         {
-            setImage("enemyRight.png");
+           setImage("enemy2right.png");
             move(1);
         }
         if(this.getX() <= 240)
         {
             move(1);
             moveRight = true;
-            setImage("enemyRight.png");
+            setImage("enemy2right.png");
         }
         if(this.getX() >= 365)
         {
             move(-1);
             moveRight = false;
-            setImage("enemyLeft1.png");
+            setImage("enemy2left.png");
         }
 
     }  

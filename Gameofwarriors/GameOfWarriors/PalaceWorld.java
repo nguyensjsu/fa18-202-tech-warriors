@@ -14,9 +14,11 @@ public class PalaceWorld extends World
     GameAladdin aladdin= new GameAladdin();
     int level_num = 0; 
     Jewel jewel1 = new PinkJewel(/*level_num*/);//for score board
+    //display life count on screen
     LifeCount lifeimg1 = new LifeCount();
     LifeCount lifeimg2 = new LifeCount();
     LifeCount lifeimg3 = new LifeCount();
+    //extra life for aladdin
     Life life1 = new MovingLife();
     Score score = new Score(aladdin, level_num);
     JewelsCollected jewelCollection= new JewelsCollected(aladdin);   
@@ -35,8 +37,10 @@ public class PalaceWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
-        addObject(aladdin, 94,737);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 345, 540);
+        addObject(aladdin, 94,737);//add aladdin obj to world
+        //add enemies
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 365, 540);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2"), 697, 442);
         addObject(life1, 652, 433);//moving life for collection
         //score board
         addObject(jewel1, 30, 25);

@@ -12,10 +12,6 @@ public class Enemy1 extends Enemies implements IEnemy
     private boolean moveRight = false;
     public Enemy1()
     {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/15;
-        int myNewWidth = (int)myImage.getWidth()/15;
-        myImage.scale(myNewWidth,myNewHeight);
     }
       
     /**
