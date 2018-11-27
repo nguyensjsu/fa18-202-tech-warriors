@@ -7,12 +7,13 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class PalaceWorld extends World
 {
 
     GameAladdin aladdin= new GameAladdin();
     int level_num = 0; 
-    Jewel1 jewel1 = new PinkJewel(level_num);//for score board
+    Jewel jewel1 = new PinkJewel(/*level_num*/);//for score board
     LifeCount lifeimg1 = new LifeCount();
     LifeCount lifeimg2 = new LifeCount();
     LifeCount lifeimg3 = new LifeCount();
@@ -21,6 +22,9 @@ public class PalaceWorld extends World
     JewelsCollected jewelCollection= new JewelsCollected(aladdin);   
     Level level = new Level(this);
     int jewelsonscreen = 14;
+    AbstractFactory enFactory = FactoryProducer.getFactory("ENEMY") ;
+    AbstractFactory jFactory = FactoryProducer.getFactory("JEWEL") ;
+    
     //Start Sound
     GreenfootSound startSound;
     /**
@@ -32,6 +36,7 @@ public class PalaceWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
         addObject(aladdin, 94,737);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 345, 540);
         addObject(life1, 652, 433);//moving life for collection
         //score board
         addObject(jewel1, 30, 25);
@@ -47,8 +52,7 @@ public class PalaceWorld extends World
         populate();
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
         level.displayLevel();
-
-
+  
         //update_jewel_count();
         //Game start sound
         //startSound = new GreenfootSound("startgame.mp3");
@@ -68,7 +72,7 @@ public class PalaceWorld extends World
         if(jewelsonscreen > 0)
             jewelsonscreen--;
         if(jewelsonscreen == 0){
-           jewel1.setlevel(1);
+           //jewel1.setlevel(1);
            score.setlevel(1);
            nextLevel();
         }
@@ -87,9 +91,11 @@ public class PalaceWorld extends World
     {
         for(int i = 0 ; i< 7 ; i++)
         {
-            addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            
+            //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("BLUE"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            //addObject((Jewel)jFactory.getJewel("GREEN"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("PINK"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));            
         }
         
     }

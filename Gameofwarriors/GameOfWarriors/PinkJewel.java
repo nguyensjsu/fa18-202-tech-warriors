@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PinkJewel extends Jewel1
+public class PinkJewel extends Jewel implements IJewel
 {
 
     int level_num;
@@ -27,17 +27,22 @@ public class PinkJewel extends Jewel1
             
         }       // Add your action code here.
     }   
-    public PinkJewel(int x)
+    public PinkJewel(/*int x*/)
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/10;
-        int myNewWidth = (int)myImage.getWidth()/10;
+        int myNewHeight = (int)myImage.getHeight()/15;
+        int myNewWidth = (int)myImage.getWidth()/20;
         myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-        level_num = x;
+        //level_num = x;
 
     }
 
     public void setlevel(int x){
         level_num = x;
     } 
+    	@Override
+    public void updateScore() {
+    	// TODO Auto-generated method stub
+    	
+    }     
 }

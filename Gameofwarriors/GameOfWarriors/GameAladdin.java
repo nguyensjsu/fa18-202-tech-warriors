@@ -13,7 +13,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     private int fallSpeed = 0;
     private int accelaration = 3;
     private boolean gameStart = true;
-    private int jumpStrength=7;
+    private int jumpStrength=12;
     GreenfootImage myImage = null;
     int remainingLife = 0;
     int jewelsCollected = 0;
@@ -64,18 +64,18 @@ public class GameAladdin extends Actor implements IScoreSubject
     }
     public void moveRight()
     {     
-        move(3);     
+        move(5);     
         setImage(myImage);
     }
     public void moveLeft()
     {
-        move(-3);  
+        move(-5);  
         setImage("alladinwidsordleft.png");
     } 
     public void fall()
     {
         
-        //System.out.println("hi");
+
         if(gameStart)
         {
             setLocation(getX(), getY());

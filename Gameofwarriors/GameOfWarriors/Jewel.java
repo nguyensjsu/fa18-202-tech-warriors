@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Jewel1 extends Actor
+public class Jewel extends Actor 
 {
     int level_num;
 
@@ -19,7 +19,7 @@ public class Jewel1 extends Actor
         // Add your action code here.
 
     }    
-    public Jewel1()
+    public Jewel()
     {
 
     }

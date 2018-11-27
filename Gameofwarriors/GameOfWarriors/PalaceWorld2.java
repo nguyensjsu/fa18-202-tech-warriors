@@ -11,7 +11,6 @@ public class PalaceWorld2 extends World
 
     PalaceWorld prev_world;
     GameAladdin aladdin;
-    Jewel1 jewel1;
     LifeCount lifeimg1;
     LifeCount lifeimg2;
     LifeCount lifeimg3;
@@ -35,7 +34,7 @@ public class PalaceWorld2 extends World
         prev_world = null;
         aladdin= new GameAladdin();
         level_num = 1;
-        jewel1 = new PinkJewel(level_num);//for score board
+        //jewel1 = new PinkJewel(level_num);//for score board
         lifeimg1 = new LifeCount();
         lifeimg2 = new LifeCount();
         lifeimg3 = new LifeCount();
@@ -58,7 +57,7 @@ public class PalaceWorld2 extends World
         level_num = 1;
         prev_world = world;
         aladdin = prev_world.aladdin;
-        jewel1 = prev_world.jewel1;
+        //jewel1 = prev_world.jewel1;
         lifeimg1 = prev_world.lifeimg1;
         lifeimg2 = prev_world.lifeimg2;
         lifeimg3 = prev_world.lifeimg3;
@@ -74,7 +73,7 @@ public class PalaceWorld2 extends World
         addObject(aladdin, 94,737);
         addObject(life1, 652, 433);//moving life for collection
         //score board
-        addObject(jewel1, 30, 25);
+        //addObject(jewel1, 30, 25);
         addObject(jewelCollection, 60,25);
         addObject(lifeimg1, 90, 25);
         addObject(lifeimg2, 120, 25);
@@ -92,8 +91,8 @@ public class PalaceWorld2 extends World
     {
         for(int i = 0 ; i< 7 ; i++)
         {
-            addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             
         }        
     }
