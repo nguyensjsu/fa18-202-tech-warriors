@@ -7,8 +7,8 @@ public class HelpOption extends Options implements IMenuInvoker {
     {
         super(option);
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/6;
-        int myNewWidth = (int)myImage.getWidth()/6;
+        int myNewHeight = (int)myImage.getHeight();
+        int myNewWidth = (int)myImage.getWidth()*3/2;
         myImage.scale(myNewWidth,myNewHeight);
     }
 

@@ -28,9 +28,9 @@ public class GameMenuWorld extends World
         playOption  = new PlayOption("Play") ;
         helpOption  = new HelpOption("Help") ;
         playCmd = new PlayCommand();
-        addObject(playOption,100,100);
+        addObject(playOption,150,100);
         helpCmd = new HelpCommand();
-        addObject(helpOption,100,300);
+        addObject(helpOption,150,245);
         playOption.setCommand(playCmd);
         playCmd.setReceiver(
                 new IMenuReceiver() {
