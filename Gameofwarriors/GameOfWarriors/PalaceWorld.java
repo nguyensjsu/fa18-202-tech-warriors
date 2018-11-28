@@ -38,9 +38,20 @@ public class PalaceWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
         addObject(aladdin, 94,737);//add aladdin obj to world
+        //adding jumpbar to the world
+        addObject(new JumpBar(), 300, 600);
+        addObject(new JumpBar(), 640, 500);
+        addObject(new JumpBar(), 410, 340);
+        addObject(new JumpBar(), 540, 140);
+        addObject(new JumpBar(), 880, 300);
+        addObject(new JumpBar(), 950, 620);
         //add enemies
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 365, 540);
-        addObject((Enemies)enFactory.getEnemy("ENEMY2"), 697, 442);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1" , 365), 365, 540);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 1005), 1005, 558);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 600), 600, 80);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 470), 470, 280);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 700), 700, 442);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 940), 940, 240);
         addObject(life1, 652, 433);//moving life for collection
         //score board
         addObject(jewel1, 30, 25);

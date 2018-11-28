@@ -2,7 +2,7 @@
 public class JewelFactory extends AbstractFactory{
 
 	@Override
-	IEnemy getEnemy(String enemyType) {
+	IEnemy getEnemy(String enemyType, int pos) {
 
 		return null;
 	}

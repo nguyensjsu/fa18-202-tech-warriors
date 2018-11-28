@@ -92,9 +92,9 @@ public class PalaceWorld2 extends World
 
     public void populate()
     {
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 437, 500);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 665, 415);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 882, 240);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 437), 437, 500);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 665), 665, 415);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 882), 882, 240);
         for(int i = 0 ; i< 7 ; i++)
         {
             //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));

@@ -6,6 +6,6 @@
  * @V1.0
  */
 public abstract class AbstractFactory {
-	   abstract IEnemy getEnemy(String enemyType);
+	   abstract IEnemy getEnemy(String enemyType, int pos);
 	   abstract IJewel getJewel(String jewelType) ;
 }

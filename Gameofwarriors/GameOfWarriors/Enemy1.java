@@ -10,6 +10,15 @@ public class Enemy1 extends Enemies implements IEnemy
 {
     private int turnSpeed = 2;
     private boolean moveRight = false;
+    private int jumpbarWidth = 260;
+    int startPos =0;
+   
+    public Enemy1(int pos)
+    {
+        startPos = pos;
+    }
+      
+    /**    
     public Enemy1()
     {
     }
@@ -20,7 +29,8 @@ public class Enemy1 extends Enemies implements IEnemy
      */
     public void act() 
     {
-        /*if (!moveRight)
+       
+        if (!moveRight)
         {
             setImage("enemyLeft1.png");
             move(-1);
@@ -30,22 +40,22 @@ public class Enemy1 extends Enemies implements IEnemy
             setImage("enemyRight.png");
             move(1);
         }
-        if(this.getX() <= 240)
+        if(this.getX() <= startPos-jumpbarWidth/2)
         {
             move(1);
             moveRight = true;
             setImage("enemyRight.png");
         }
-        if(this.getX() >= 365)
+        if(this.getX() >= startPos)
         {
             move(-1);
             moveRight = false;
             setImage("enemyLeft1.png");
-        }*/
+        }
 
         //control multiple actors w/o reliance on coordinates
         //includes random turning behavior
-        Actor actor = getOneIntersectingObject(JumpBar.class);
+        /*Actor actor = getOneIntersectingObject(JumpBar.class);
         int flip = Greenfoot.getRandomNumber (100);
         if(actor != null)
         {
@@ -76,7 +86,7 @@ public class Enemy1 extends Enemies implements IEnemy
               moveRight = false;
               setLeft(-1);
            }
-        } 
+        } */
 
     }
 
