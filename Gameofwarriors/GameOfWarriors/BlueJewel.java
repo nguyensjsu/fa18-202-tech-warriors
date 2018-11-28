@@ -10,15 +10,14 @@ public class BlueJewel extends Jewel implements IJewel
 
     int level_num;
 
-    public BlueJewel(/*int x*/)
+    public BlueJewel(int x)
     {
-        //level_num = x;
+        level_num = x;
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/25;
         int myNewWidth = (int)myImage.getWidth()/25;
         myImage.scale(myNewWidth,myNewHeight);
         
-
     }
     /**
      * Act - do whatever the BlueJewel wants to do. This method is called whenever

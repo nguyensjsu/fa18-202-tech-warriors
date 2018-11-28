@@ -7,5 +7,5 @@
  */
 public abstract class AbstractFactory {
 	   abstract IEnemy getEnemy(String enemyType, int pos);
-	   abstract IJewel getJewel(String jewelType) ;
+	   abstract IJewel getJewel(String jewelType, int level) ;
 }

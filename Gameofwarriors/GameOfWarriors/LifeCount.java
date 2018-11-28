@@ -10,6 +10,7 @@ public class LifeCount extends Life
 {
     public int lifeCount = 3;
     public String state= "";
+    public int level;
 
     /**
      * Act - do whatever the LifeImage wants to do. This method is called whenever
@@ -23,11 +24,31 @@ public class LifeCount extends Life
     public void updateLife()
     {
         GameAladdin aladdin = (GameAladdin)getWorld().getObjects(GameAladdin.class).get(0);
-        PalaceWorld palace = (PalaceWorld)getWorld();
-        state = palace.aladdin.getAladdinState();
+        if(level == 0){
+           PalaceWorld palace = (PalaceWorld)getWorld();
+           state = palace.aladdin.getAladdinState();
+           if(state =="dead"){
+              loseLife();
+           }
+           else if(state == "gotLife"){
+              gainLife();
+           }
+        }
+        else if(level == 1){
+           PalaceWorld2 palace = (PalaceWorld2)getWorld();
+           state = palace.aladdin.getAladdinState();
+           if(state =="dead"){
+              loseLife();
+           }
+           else if(state == "gotLife"){
+              gainLife();
+           }
+        }
         
-        
-        if(state =="dead"){
+    }
+
+    public void loseLife()
+    {
             if(lifeCount ==3)
             {
                 
@@ -47,10 +68,11 @@ public class LifeCount extends Life
                 lifeCount--;
                 getWorld().removeObjects(getWorld().getObjectsAt( 90, 25,LifeCount.class));             
                 Greenfoot.stop();   
-            }                
-            
-        }
-        else if(state =="gotLife"){
+            }  
+    }
+
+    public void gainLife()
+    {
             LifeCount lifecount = new LifeCount();
             
             if(lifeCount ==2)
@@ -64,11 +86,11 @@ public class LifeCount extends Life
                 lifeCount++;               
                 
             }
-            
-                
-        }
-        
-        
+    } 
+
+    public void setLifeWorld (int level)
+    {
+       this.level = level;
     }
    
 }

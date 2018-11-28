@@ -38,8 +38,10 @@ public class PalaceWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
         addObject(aladdin, 94,737);//add aladdin obj to world
-        //adding jumpbar to the world
-        
+        //set lifecount to PalaceWorld
+        lifeimg1.setLifeWorld(level_num);
+        lifeimg2.setLifeWorld(level_num);
+        lifeimg3.setLifeWorld(level_num);
         //add enemies
         addObject((Enemies)enFactory.getEnemy("ENEMY1" , 365), 365, 540);
         addObject((Enemies)enFactory.getEnemy("ENEMY1", 1005), 1005, 558);
@@ -103,9 +105,9 @@ public class PalaceWorld extends World
         {
             //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject((Jewel)jFactory.getJewel("BLUE"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("BLUE", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             //addObject((Jewel)jFactory.getJewel("GREEN"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject((Jewel)jFactory.getJewel("PINK"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));            
+            addObject((Jewel)jFactory.getJewel("PINK", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));            
         }
         
     }

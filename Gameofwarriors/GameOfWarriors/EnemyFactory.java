@@ -15,7 +15,7 @@ public class EnemyFactory extends AbstractFactory {
 	}
 
 	@Override
-	IJewel getJewel(String jewelType) {
+	IJewel getJewel(String jewelType, int level) {
 		return null;
 	}
 	

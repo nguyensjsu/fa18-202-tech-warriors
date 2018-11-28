@@ -40,6 +40,10 @@ public class PalaceWorld2 extends World
         lifeimg1 = new LifeCount();
         lifeimg2 = new LifeCount();
         lifeimg3 = new LifeCount();
+        //set lifecount to PalaceWorld2
+        lifeimg1.setLifeWorld(level_num);
+        lifeimg2.setLifeWorld(level_num);
+        lifeimg3.setLifeWorld(level_num);
         life1 = new MovingLife();
         score = new Score(aladdin, level_num);
         jewelCollection= new JewelsCollected(aladdin);
@@ -62,6 +66,10 @@ public class PalaceWorld2 extends World
         lifeimg1 = x;
         lifeimg2 = y;
         lifeimg3 = z;
+        //set lifecount to PalaceWorld2
+        lifeimg1.setLifeWorld(level_num);
+        lifeimg2.setLifeWorld(level_num);
+        lifeimg3.setLifeWorld(level_num);
         this.life1 = life1;
         this.score = score;
         this.jewelCollection = jewelCollection;
@@ -99,9 +107,9 @@ public class PalaceWorld2 extends World
         {
             //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject((Jewel)jFactory.getJewel("BLUE"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("BLUE", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             //addObject((Jewel)jFactory.getJewel("GREEN"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            addObject((Jewel)jFactory.getJewel("PINK"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("PINK", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
         }        
     }
 

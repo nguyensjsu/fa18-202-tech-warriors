@@ -27,14 +27,21 @@ public class PinkJewel extends Jewel implements IJewel
             
         }       // Add your action code here.
     }   
-    public PinkJewel(/*int x*/)
+    public PinkJewel(int x)
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/15;
         int myNewWidth = (int)myImage.getWidth()/20;
         myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-        //level_num = x;
+        level_num = x;
 
+    }
+    public PinkJewel()
+    {
+        GreenfootImage myImage = getImage();
+        int myNewHeight = (int)myImage.getHeight()/15;
+        int myNewWidth = (int)myImage.getWidth()/20;
+        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
     }
 
     public void setlevel(int x){
