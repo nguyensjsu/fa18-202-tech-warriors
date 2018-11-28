@@ -20,6 +20,8 @@ public class PalaceWorld2 extends World
     Level level;
     int jewelsonscreen;
     int level_num;
+    AbstractFactory enFactory = FactoryProducer.getFactory("ENEMY") ;
+    AbstractFactory jFactory = FactoryProducer.getFactory("JEWEL") ;    
     //Start Sound
     GreenfootSound startSound;
 
@@ -50,21 +52,21 @@ public class PalaceWorld2 extends World
      * Constructor for objects of class PalaceWorld2.
      * 
      */
-    public PalaceWorld2(PalaceWorld world)
+    public PalaceWorld2(PalaceWorld world, GameAladdin aladdin, LifeCount x, LifeCount y, LifeCount z, Life life1, Score score, JewelsCollected jewelCollection, Level level)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
         level_num = 1;
-        prev_world = world;
-        aladdin = prev_world.aladdin;
+        this.aladdin = aladdin;
         //jewel1 = prev_world.jewel1;
-        lifeimg1 = prev_world.lifeimg1;
-        lifeimg2 = prev_world.lifeimg2;
-        lifeimg3 = prev_world.lifeimg3;
-        life1 = prev_world.life1;
-        score = prev_world.score;
-        jewelCollection = prev_world.jewelCollection;
-        level = prev_world.level;
+        lifeimg1 = x;
+        lifeimg2 = y;
+        lifeimg3 = z;
+        this.life1 = life1;
+        this.score = score;
+        this.jewelCollection = jewelCollection;
+        this.level = level;
+        level.setLevel(level_num, this);
         startup();
     }
 
@@ -84,16 +86,22 @@ public class PalaceWorld2 extends World
         aladdin.attach(score);//attach game actor to update on score.     
         aladdin.attach(jewelCollection);//attach game actor to update on score.
         populate();
-        aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.        
+        aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
+        level.displayLevel();        
     }
 
     public void populate()
     {
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 437, 508);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 665, 432);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 882, 258);
         for(int i = 0 ; i< 7 ; i++)
         {
             //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            
+            addObject((Jewel)jFactory.getJewel("BLUE"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            //addObject((Jewel)jFactory.getJewel("GREEN"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("PINK"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
         }        
     }
 
@@ -102,7 +110,8 @@ public class PalaceWorld2 extends World
         if(jewelsonscreen > 0)
             jewelsonscreen--;
         if(jewelsonscreen == 0){
-           
+
         }
     }
+
 }

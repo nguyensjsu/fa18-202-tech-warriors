@@ -42,14 +42,15 @@ public class Level extends Actor
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    /*public void setLevel()
+    public void setLevel(int x, PalaceWorld2 world)
     {
-        level++;
-        switch(level){
-            case 1: level_strat = new Level1Strategy(world);
+        level_num = x;
+        switch(level_num){
+            case 1: world2 = world;
+                    level_strat = new Level1Strategy((PalaceWorld2) world);
                     break;
         }
-    }*/
+    }
     
     /**
      * An example of a method - replace this comment with your own

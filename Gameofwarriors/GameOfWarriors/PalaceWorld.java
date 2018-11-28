@@ -85,7 +85,7 @@ public class PalaceWorld extends World
     public void nextLevel()
     {
         level_num++;
-        World palaceWorld2 = new PalaceWorld2(this);
+        World palaceWorld2 = new PalaceWorld2(this, aladdin, lifeimg1, lifeimg2, lifeimg3, life1, score, jewelCollection, level);
         Greenfoot.setWorld(palaceWorld2);
         //level.setLevel();
         //level.displayLevel();
