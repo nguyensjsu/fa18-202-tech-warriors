@@ -20,7 +20,7 @@ public class Enemy1 extends Enemies implements IEnemy
      */
     public void act() 
     {
-        if (!moveRight)
+        /*if (!moveRight)
         {
             setImage("enemyLeft1.png");
             move(-1);
@@ -41,8 +41,53 @@ public class Enemy1 extends Enemies implements IEnemy
             move(-1);
             moveRight = false;
             setImage("enemyLeft1.png");
-        }
+        }*/
 
+        //control multiple actors w/o reliance on coordinates
+        //includes random turning behavior
+        Actor actor = getOneIntersectingObject(JumpBar.class);
+        int flip = Greenfoot.getRandomNumber (100);
+        if(actor != null)
+        {
+            if (!moveRight) {
+               if(flip < 98)
+                  setLeft(-1);
+               else{
+                  setRight(1);
+                  moveRight = true;
+               }
+            }
+            else {
+               if(flip < 98)
+                  setRight(1);
+               else{
+                  setLeft(-1);
+                  moveRight = false;    
+               }
+            }   
+        }
+        else
+        {
+           if(!moveRight){
+               moveRight = true;
+               setRight(1);
+           }
+           else {
+              moveRight = false;
+              setLeft(-1);
+           }
+        } 
+
+    }
+
+    public void setLeft(int x) {
+       setImage("enemyLeft1.png");
+       move(x);       
+    }
+
+    public void setRight(int x) {
+       setImage("enemyRight.png");
+       move(x);       
     }    
     
     @Override

@@ -73,7 +73,7 @@ public class PalaceWorld2 extends World
     public void startup()
     {
         addObject(aladdin, 94,737);
-        addObject(life1, 652, 433);//moving life for collection
+        //addObject(life1, 652, 433);//moving life for collection
         //score board
         //addObject(jewel1, 30, 25);
         addObject(jewelCollection, 60,25);
@@ -92,9 +92,9 @@ public class PalaceWorld2 extends World
 
     public void populate()
     {
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 437, 508);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 665, 432);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 882, 258);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 437, 500);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 665, 415);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1"), 882, 240);
         for(int i = 0 ; i< 7 ; i++)
         {
             //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
