@@ -35,10 +35,16 @@ public class GameAladdin extends Actor implements IScoreSubject
      */
     public void act() 
     {
-        if(getOneObjectAtOffset(0,0,Enemies.class)!= null){
+        /*if(getOneObjectAtOffset(0,0,Enemies.class)!= null){
+            die();
+            //Greenfoot.stop();    
+        }*/
+        if(getOneIntersectingObject(Enemies.class)!= null){
+            setLocation(94,710);
             die();
             //Greenfoot.stop();    
         }
+
         checkKeys();
         checkFall();
     }    
@@ -144,7 +150,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     }
     public void setAladdinState(String marioStatus)
     {
-        aladdinState = aladdinState;
+        aladdinState = marioStatus;
         notifyLifeObservers();
         
     }
