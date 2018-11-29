@@ -47,10 +47,10 @@ Sprint#2 - Week 1 - 11/16 - 11/22
 
 What I did since the last daily scrum:
 
-1)Identified and added charachters for the game.
-2)Displayed scores, lives,levels and coins collcted on the screen.
-3)Identified observer pattern for updating scores, life and level.
-4)Started implementation for observer pattern.
+1) Identified and added charachters for the game.
+2) Displayed scores, lives,levels and coins collcted on the screen.
+3) Identified observer pattern for updating scores, life and level.
+4) Started implementation for observer pattern.
 
 
 What do I plan to do this week:
