@@ -1,4 +1,9 @@
-
+/**
+ * Command Pattern
+ * Menu Command interface
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 public interface IMenuCommand {
     /** Execute the Command */
     void execute() ;

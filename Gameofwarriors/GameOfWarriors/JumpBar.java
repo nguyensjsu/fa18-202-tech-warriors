@@ -15,7 +15,6 @@ public class JumpBar extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
         
     }    
     public JumpBar()

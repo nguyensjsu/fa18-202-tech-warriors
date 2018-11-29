@@ -34,14 +34,24 @@ public class BlueJewel extends Jewel implements IJewel
             
         }      
     }
+    /**
+     * Set next level
+     * @param x level number
+     */    
     public void setlevel(int x)
     {
         level_num = x;
-    }    
+    }   
+    //parent class method
     @Override
     public void updateScore() 
     {     
+
     }  
+    /**
+     * Increment score once aladdin collect the jewels
+     * @param x level number
+     */       
     public void incrementScore(int x)
     {
         if(x == 0) {
@@ -55,12 +65,17 @@ public class BlueJewel extends Jewel implements IJewel
             palace.aladdin.setScoreState(this.getClass().getName());
         }
     }
-    
+    /**
+     * Remove jewels from the world
+     */       
     public void removeFromWorld()
     {
         getWorld().removeObject(this);
     }
-    
+    /**
+     * Decrease Jewel count from the world
+     * @param x level number     
+     */      
     public void decreaseCount(int x)
     {
         if(x == 0)

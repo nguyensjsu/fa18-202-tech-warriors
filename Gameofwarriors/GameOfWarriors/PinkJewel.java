@@ -25,8 +25,12 @@ public class PinkJewel extends Jewel implements IJewel
             decreaseCount(level_num);
             removeFromWorld();
             
-        }       // Add your action code here.
-    }   
+        }       
+    }  
+    public PinkJewel()
+    {
+
+    }
     public PinkJewel(int x)
     {
         GreenfootImage myImage = getImage();
@@ -36,22 +40,20 @@ public class PinkJewel extends Jewel implements IJewel
         level_num = x;
 
     }
-    public PinkJewel()
-    {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/15;
-        int myNewWidth = (int)myImage.getWidth()/20;
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-    }
-
+    /**
+     * Set next level
+     * @param x level number
+     */    
     public void setlevel(int x){
         level_num = x;
     } 
     @Override
     public void updateScore() {
-    	// TODO Auto-generated method stub
-    	
     } 
+    /**
+     * Increment score once aladdin collect the jewels
+     * @param x level number
+     */        
     public void incrementScore(int x)
     {
         if(x == 0) {

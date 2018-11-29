@@ -1,7 +1,7 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
- * Write a description of class Jewel1 here.
+ * Aladdin will collect Jewel to get points
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -16,17 +16,15 @@ public abstract class Jewel extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-        Actor actor = getOneIntersectingObject(GameAladdin.class);
-        if(actor != null)
-        {
-            processJewels();
-        }
+
     }    
     public Jewel()
     {
         
     }
+     /**
+     * Template for template pattern
+     */   
     public final void processJewels()
     {
         incrementScore(level_num);

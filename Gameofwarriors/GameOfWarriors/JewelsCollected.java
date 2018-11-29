@@ -1,10 +1,9 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 /**
- * Write a description of class Jewels here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * To Display Jewels Collected by Aladdin
+ * @jainsupriya
+ * v1.0
  */
 public class JewelsCollected extends Actor implements  IScoreObserver
 {
@@ -22,23 +21,27 @@ public class JewelsCollected extends Actor implements  IScoreObserver
      */
     public void act() 
     {
-        // Add your action code here.
-    }   
+
+    }  
+     /**
+     * Update no of jewels on receiving notification from aladdin
+     */    
     public void updateScore()
     {
         totalJewels++;
         eventUpdate();
         
     }
+     /**
+     * display jewels count on the screen 
+     */       
     public void eventUpdate()
     {
         GreenfootImage image = getImage();
         image.clear();
         image.setColor(Color.WHITE);
         image.setFont(new Font("Trebuchet MS", true, true, 20));
-        image.drawString(""+ totalJewels, 3, 15);
- 
-        
+        image.drawString(""+ totalJewels, 3, 15);      
     }
     
 }

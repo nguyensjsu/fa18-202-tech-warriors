@@ -15,8 +15,6 @@ public class MovingLife extends Life
      */
     public void act() 
     {
-        // Add your action code here.
-             // Add your action code here.
         move(3);
         randomTurn();
         turnAtEdge();
@@ -43,7 +41,7 @@ public class MovingLife extends Life
             turn(Greenfoot.getRandomNumber(40)-20);
     }
      /**
-     * if we reach at edge of the world turn little bit
+     * if reach at edge of the world turn little bit
      */   
     public void turnAtEdge()
     {
