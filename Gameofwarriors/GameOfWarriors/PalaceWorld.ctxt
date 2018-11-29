@@ -1,12 +1,11 @@
 #BlueJ class context
 comment0.target=PalaceWorld
-comment0.text=\n\ Write\ a\ description\ of\ class\ PalaceWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PalaceWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=PalaceWorld()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ PalaceWorld.\n\ \n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ PalaceWorld.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ decrease_jewels()
-comment2.text=public\ void\ update_jewel_count()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ GreenfootImage\ image\ \=\ getBackground();\n\ \ \ \ \ \ \ \ image.setColor(Color.WHITE);\n\ \ \ \ \ \ \ \ image.setFont(new\ Font("Trebuchet\ MS",\ true,\ true,\ 20));\n\ \ \ \ \ \ \ \ image.drawString("Jewels\:\ "\ +jewelsonscreen,\ 400,\ 25);\n}
 comment3.params=
 comment3.target=void\ nextLevel()
 comment4.params=

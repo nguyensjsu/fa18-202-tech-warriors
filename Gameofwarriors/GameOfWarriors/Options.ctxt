@@ -2,7 +2,7 @@
 comment0.target=Options
 comment1.params=option
 comment1.target=Options(java.lang.String)
-comment1.text=\n\ Constructor\n
+comment1.text=\r\n\ Constructor\r\n
 comment2.params=
 comment2.target=void\ imageLabel()
 comment3.params=

@@ -24,6 +24,7 @@ public class PalaceWorld2 extends World
     AbstractFactory jFactory = FactoryProducer.getFactory("JEWEL") ;    
     //Start Sound
     GreenfootSound startSound;
+    Jewel jewel1;//for score board
 
     /**
      * Constructor for objects of class PalaceWorld2.
@@ -36,7 +37,7 @@ public class PalaceWorld2 extends World
         prev_world = null;
         aladdin= new GameAladdin();
         level_num = 1;
-        //jewel1 = new PinkJewel(level_num);//for score board
+        jewel1 = new PinkJewel(level_num);//for score board
         lifeimg1 = new LifeCount();
         lifeimg2 = new LifeCount();
         lifeimg3 = new LifeCount();
@@ -62,7 +63,7 @@ public class PalaceWorld2 extends World
         super(1153, 800, 1);
         level_num = 1;
         this.aladdin = aladdin;
-        //jewel1 = prev_world.jewel1;
+        jewel1 = new PinkJewel(level_num);//for score board
         lifeimg1 = x;
         lifeimg2 = y;
         lifeimg3 = z;
@@ -83,7 +84,7 @@ public class PalaceWorld2 extends World
         addObject(aladdin, 94,737);
         //addObject(life1, 652, 433);//moving life for collection
         //score board
-        //addObject(jewel1, 30, 25);
+        addObject(jewel1, 30, 25);
         addObject(jewelCollection, 60,25);
         addObject(lifeimg1, 90, 25);
         addObject(lifeimg2, 120, 25);
@@ -105,10 +106,8 @@ public class PalaceWorld2 extends World
         addObject((Enemies)enFactory.getEnemy("ENEMY1", 882), 882, 240);
         for(int i = 0 ; i< 7 ; i++)
         {
-            //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             addObject((Jewel)jFactory.getJewel("BLUE", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            //addObject((Jewel)jFactory.getJewel("GREEN"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            //addObject((Jewel)jFactory.getJewel("GREEN", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             addObject((Jewel)jFactory.getJewel("PINK", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
         }        
     }
