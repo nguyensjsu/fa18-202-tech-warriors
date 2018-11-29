@@ -65,10 +65,12 @@ public class LifeCount extends Life
             } 
              else  if(lifeCount ==1)
             {
+                World world = getWorld();
                 // game over sound
                 lifeCount--;
                 getWorld().removeObjects(getWorld().getObjectsAt( 90, 25,LifeCount.class));             
-                Greenfoot.stop();   
+                world.addObject(new GameOver(), world.getWidth()/2, world.getHeight()/2);
+                Greenfoot.stop();
             }  
     }
 
