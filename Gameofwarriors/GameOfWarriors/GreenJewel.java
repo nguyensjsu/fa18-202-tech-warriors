@@ -28,10 +28,7 @@ public class GreenJewel extends Jewel implements IJewel
         Actor actor = getOneIntersectingObject(GameAladdin.class);
         if(actor != null)
         {
-            incrementScore(level_num);
-            decreaseCount(level_num);
-            removeFromWorld();
-            
+            processJewels();  
         }      
     }
      /**
@@ -47,7 +44,7 @@ public class GreenJewel extends Jewel implements IJewel
     {     
     }  
      /**
-     * Increment score once aladdin collect the jewels
+     * Increment score when aladdin collects the jewels
      * @param x level number
      */      
     public void incrementScore(int x)
@@ -71,7 +68,7 @@ public class GreenJewel extends Jewel implements IJewel
         getWorld().removeObject(this);
     }
      /**
-     * Decrease Jewel count from the world
+     * Decrease Jewel count 
      * @param x level number     
      */       
     public void decreaseCount(int x)

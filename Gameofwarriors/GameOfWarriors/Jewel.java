@@ -28,9 +28,8 @@ public abstract class Jewel extends Actor
     public final void processJewels()
     {
         incrementScore(level_num);
-        removeFromWorld();
         decreaseCount(level_num);
-        
+        removeFromWorld();
     }
     abstract void incrementScore(int x);
     abstract void removeFromWorld();

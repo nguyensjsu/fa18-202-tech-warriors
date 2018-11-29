@@ -20,11 +20,7 @@ public class PinkJewel extends Jewel implements IJewel
          Actor actor = getOneIntersectingObject(GameAladdin.class);
         if(actor != null)
         {
-            incrementScore(level_num);
-            //removeFromList();
-            decreaseCount(level_num);
-            removeFromWorld();
-            
+            processJewels();  
         }       
     }  
     public PinkJewel()
@@ -54,7 +50,7 @@ public class PinkJewel extends Jewel implements IJewel
     public void updateScore() {
     } 
     /**
-     * Increment score once aladdin collect the jewels
+     * Increment score when aladdin collects the jewels
      * @param x level number
      */        
     public void incrementScore(int x)
@@ -70,12 +66,17 @@ public class PinkJewel extends Jewel implements IJewel
             palace.aladdin.setScoreState(this.getClass().getName());
         }
     }
-    
+    /**
+     * Remove jewels from the world
+     */      
     public void removeFromWorld()
     {
         getWorld().removeObject(this);
     }
-    
+     /**
+     * Decrease Jewel count 
+     * @param x level number     
+     */         
     public void decreaseCount(int x)
     {
         if(x == 0)
