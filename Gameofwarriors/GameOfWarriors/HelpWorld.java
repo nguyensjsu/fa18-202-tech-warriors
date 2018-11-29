@@ -13,6 +13,8 @@ public class HelpWorld extends World
     //private BackCommand backCmd ;
     //Start Sound
     GreenfootSound background;
+    private BackOption backOption ;
+    private BackCommand backCmd ;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -27,21 +29,21 @@ public class HelpWorld extends World
         addObject(new RightArrow(),100, 135);
         addObject(new LeftArrowText(),400, 50);
         addObject(new RightArrowText(),400, 135);
-        //backOption  = new BackOption("Back to Main Menu") ;
-        //backCmd = new BackCommand();
-        /*addObject(backOption,150,100);
+        backOption  = new BackOption("Back") ;
+        backCmd = new BackCommand();
+        addObject(backOption,600,650);
         backOption.setCommand(backCmd);
         backCmd.setReceiver(
                 new IMenuReceiver() {
                     /** Command Action */
-                    /*public void doAction() {
+                    public void doAction() {
                         if(Greenfoot.mouseClicked(backOption)){
                             World gameMenuWorld = new GameMenuWorld();
                             Greenfoot.setWorld(gameMenuWorld);
                         }
                     }
               }
-              ) ;*/
+              ) ;
     }
 
 }
