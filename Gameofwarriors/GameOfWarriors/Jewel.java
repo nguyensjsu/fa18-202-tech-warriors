@@ -8,7 +8,6 @@ import greenfoot.*;
  */
 public abstract class Jewel extends Actor 
 {
-    public int level_num;
 
     /**
      * Act - do whatever the Jewel1 wants to do. This method is called whenever
@@ -27,15 +26,12 @@ public abstract class Jewel extends Actor
      */   
     public final void processJewels()
     {
-        incrementScore(level_num);
-        decreaseCount(level_num);
+        incrementScore();
+        decreaseCount();
         removeFromWorld();
     }
-    abstract void incrementScore(int x);
+    abstract void incrementScore();
     abstract void removeFromWorld();
-    abstract void decreaseCount(int x);
-    
-    public void setlevel(int x){
-        level_num = x;
-    }  
+    abstract void decreaseCount();
+     
 }

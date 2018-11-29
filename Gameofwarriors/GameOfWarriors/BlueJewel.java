@@ -49,14 +49,14 @@ public class BlueJewel extends Jewel implements IJewel
      * Increment score when aladdin collects the jewels
      * @param x level number
      */       
-    public void incrementScore(int x)
+    public void incrementScore()
     {
-        if(x == 0) {
+        if(level_num  == 0) {
             PalaceWorld palace = (PalaceWorld)getWorld();
             palace.aladdin.jewelsCollected++;
             palace.aladdin.setScoreState(this.getClass().getName());
         }
-        else if(x == 1) {
+        else if(level_num == 1) {
             PalaceWorld2 palace = (PalaceWorld2)getWorld();
             palace.aladdin.jewelsCollected++;
             palace.aladdin.setScoreState(this.getClass().getName());
@@ -73,14 +73,14 @@ public class BlueJewel extends Jewel implements IJewel
      * Decrease Jewel count 
      * @param x level number     
      */      
-    public void decreaseCount(int x)
+    public void decreaseCount()
     {
-        if(x == 0)
+        if(level_num == 0)
         { 
             PalaceWorld palace = (PalaceWorld)getWorld();
             palace.decrease_jewels();
         }
-        else if(x == 1)
+        else if(level_num == 1)
         {
             PalaceWorld2 palace = (PalaceWorld2)getWorld();
             palace.decrease_jewels(); 
