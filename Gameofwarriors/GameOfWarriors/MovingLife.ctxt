@@ -12,5 +12,5 @@ comment4.params=
 comment4.target=void\ randomTurn()
 comment5.params=
 comment5.target=void\ turnAtEdge()
-comment5.text=\n\ if\ we\ reach\ at\ edge\ of\ the\ world\ turn\ little\ bit\n
+comment5.text=\n\ if\ reach\ at\ edge\ of\ the\ world\ turn\ little\ bit\n
 numComments=6

@@ -18,7 +18,7 @@ public class GameLevels extends Actor implements IMenuInvoker
     private void imageLabel()
     {
         GreenfootImage bgImage = new GreenfootImage(getImage());
-        GreenfootImage text = new GreenfootImage(level, 150, greenfoot.Color.BLACK, new greenfoot.Color(0,0,0,0));
+        GreenfootImage text = new GreenfootImage(level, 30, greenfoot.Color.BLACK, new greenfoot.Color(0,0,0,0));
         int x = (int)(bgImage.getWidth() -text.getWidth() ) /2;
         int y = (int)(bgImage.getHeight() -text.getHeight() ) /2;
         if (text.getWidth() > bgImage.getWidth() - 20) {

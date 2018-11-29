@@ -7,8 +7,8 @@ public class MediumOption extends GameLevels implements IMenuInvoker {
     {
         super(level);
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/6;
-        int myNewWidth = (int)myImage.getWidth()/6;
+        int myNewHeight = (int)myImage.getHeight()*3/2;
+        int myNewWidth = (int)myImage.getWidth();
         myImage.scale(myNewWidth,myNewHeight);
     }
 
