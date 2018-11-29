@@ -23,13 +23,13 @@ public class levelWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1100, 800, 1);
-        //addObject(aladdin,1050, 600);
+        addObject(aladdin,1050, 600);
         easyOption  = new EasyOption("Easy") ;
         mediumOption  = new MediumOption("Medium") ;
         easyCmd = new EasyOptionCmd();
-        addObject(easyOption,570,420);
+        addObject(easyOption,620,200);
         mediumCmd = new MediumOptionCmd();
-        addObject(mediumOption,570,530);
+        addObject(mediumOption,620,500);
         easyOption.setCommand(easyCmd);
         easyCmd.setReceiver(
                 new IMenuReceiver() {
