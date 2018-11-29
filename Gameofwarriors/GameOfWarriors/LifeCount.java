@@ -49,6 +49,7 @@ public class LifeCount extends Life
 
     public void loseLife()
     {
+            
             if(lifeCount ==3)
             {
                 

@@ -36,11 +36,13 @@ public class Score extends Actor implements IScoreObserver
         image.drawString("Score: "+ totalScore, 5, 20);
        
     }
-    public void addScoreForJewel1()
+    public void addScoreForJewel()
     {
-        if(jewelName == "PinkJewel")
+        if(jewelName == "GreenJewel")
+            totalScore = totalScore+20;
+        else if (jewelName == "PinkJewel")
             totalScore = totalScore+10;
-        else 
+        else if (jewelName == "BlueJewel")
             totalScore = totalScore+5;
         eventUpdate();
     }
@@ -50,15 +52,15 @@ public class Score extends Actor implements IScoreObserver
            PalaceWorld palace =(PalaceWorld)getWorld();
            jewelName = palace.aladdin.getScoreState();
         
-           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" )
-              addScoreForJewel1();
+           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" || jewelName == "BlueJewel")
+              addScoreForJewel();
         }
         else if(level_num == 1){
            PalaceWorld2 palace =(PalaceWorld2)getWorld();
            jewelName = palace.aladdin.getScoreState();
         
-           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" )
-              addScoreForJewel1();            
+           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" ||  jewelName == "BlueJewel")
+              addScoreForJewel();            
         }
     
     }

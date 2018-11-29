@@ -6,9 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Jewel extends Actor 
+public abstract class Jewel extends Actor 
 {
-    int level_num;
+    public int level_num;
 
     /**
      * Act - do whatever the Jewel1 wants to do. This method is called whenever
@@ -17,47 +17,26 @@ public class Jewel extends Actor
     public void act() 
     {
         // Add your action code here.
-
+        Actor actor = getOneIntersectingObject(GameAladdin.class);
+        if(actor != null)
+        {
+            processJewels();
+        }
     }    
     public Jewel()
     {
-
+        
     }
-
-    public void incrementScore(int x)
+    public final void processJewels()
     {
-        if(x == 0) {
-            PalaceWorld palace = (PalaceWorld)getWorld();
-            palace.aladdin.jewelsCollected++;
-            palace.aladdin.setScoreState(this.getClass().getName());
-        }
-        else if(x == 1) {
-            PalaceWorld2 palace = (PalaceWorld2)getWorld();
-            palace.aladdin.jewelsCollected++;
-            palace.aladdin.setScoreState(this.getClass().getName());
-        }
+        incrementScore(level_num);
+        removeFromWorld();
+        decreaseCount(level_num);
+        
     }
-   /* public void removeFromList()
-    {
-        PalaceWorld palace = (PalaceWorld)getWorld();
-        palace.getJewels().remove(this);
-    }*/
-    
-   public void removeFromWorld(){
-        getWorld().removeObject(this);
-    }
-
-    public void decreaseCount(int x){
-        if(x == 0){ 
-            PalaceWorld palace = (PalaceWorld)getWorld();
-            palace.decrease_jewels();
-        }
-        else if(x == 1){
-            PalaceWorld2 palace = (PalaceWorld2)getWorld();
-            palace.decrease_jewels(); 
-        }
-        //palace.update_jewel_count();
-    }
+    abstract void incrementScore(int x);
+    abstract void removeFromWorld();
+    abstract void decreaseCount(int x);
     
     public void setlevel(int x){
         level_num = x;

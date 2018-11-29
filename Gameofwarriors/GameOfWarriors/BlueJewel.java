@@ -34,10 +34,44 @@ public class BlueJewel extends Jewel implements IJewel
             
         }      
     }
-    public void setlevel(int x){
+    public void setlevel(int x)
+    {
         level_num = x;
     }    
     @Override
-    public void updateScore() {   	
+    public void updateScore() 
+    {     
+    }  
+    public void incrementScore(int x)
+    {
+        if(x == 0) {
+            PalaceWorld palace = (PalaceWorld)getWorld();
+            palace.aladdin.jewelsCollected++;
+            palace.aladdin.setScoreState(this.getClass().getName());
+        }
+        else if(x == 1) {
+            PalaceWorld2 palace = (PalaceWorld2)getWorld();
+            palace.aladdin.jewelsCollected++;
+            palace.aladdin.setScoreState(this.getClass().getName());
+        }
+    }
+    
+    public void removeFromWorld()
+    {
+        getWorld().removeObject(this);
+    }
+    
+    public void decreaseCount(int x)
+    {
+        if(x == 0)
+        { 
+            PalaceWorld palace = (PalaceWorld)getWorld();
+            palace.decrease_jewels();
+        }
+        else if(x == 1)
+        {
+            PalaceWorld2 palace = (PalaceWorld2)getWorld();
+            palace.decrease_jewels(); 
+        }
     }    
 }

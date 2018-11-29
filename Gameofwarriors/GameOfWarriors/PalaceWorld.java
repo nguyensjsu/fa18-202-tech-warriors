@@ -103,10 +103,9 @@ public class PalaceWorld extends World
     {
         for(int i = 0 ; i< 7 ; i++)
         {
-            //addObject(new BlueJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            //addObject(new PinkJewel(level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+
             addObject((Jewel)jFactory.getJewel("BLUE", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
-            //addObject((Jewel)jFactory.getJewel("GREEN"), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
+            addObject((Jewel)jFactory.getJewel("GREEN", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));
             addObject((Jewel)jFactory.getJewel("PINK", level_num), Greenfoot.getRandomNumber (1100),Greenfoot.getRandomNumber (700));            
         }
         

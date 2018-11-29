@@ -17,7 +17,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     GreenfootImage myImage = null;
     int remainingLife = 0;
     int jewelsCollected = 0;
-    public int lifeCount = 3;
+    //public int lifeCount = 3;
     private String scoreState;
     private ArrayList<IScoreObserver> scoreObserver = new ArrayList<IScoreObserver>() ;
     private ArrayList<LifeCount> lives = new ArrayList<LifeCount>() ;
@@ -35,9 +35,9 @@ public class GameAladdin extends Actor implements IScoreSubject
      */
     public void act() 
     {
-        if(getOneIntersectingObject(Enemies.class)!= null){
+        if(getOneObjectAtOffset(0,0,Enemies.class)!= null){
             die();
-            Greenfoot.stop();    
+            //Greenfoot.stop();    
         }
         checkKeys();
         checkFall();
@@ -144,7 +144,7 @@ public class GameAladdin extends Actor implements IScoreSubject
     }
     public void setAladdinState(String marioStatus)
     {
-        aladdinState = marioStatus;
+        aladdinState = aladdinState;
         notifyLifeObservers();
         
     }
@@ -171,8 +171,9 @@ public class GameAladdin extends Actor implements IScoreSubject
      * Trigger Events to Observers
      */
     public void notifyLifeObservers() {
+        System.out.println(lives.size());
         for (LifeCount obj  : lives)
-        {
+        {        
             obj.updateLife();
         }
     }

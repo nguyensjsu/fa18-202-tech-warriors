@@ -1,31 +1,77 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GreenJewel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Create Jewels on the screen
+ * @jainsupriya
+ * @V1.0
  */
 public class GreenJewel extends Jewel implements IJewel
 {
+
+    int level_num;
+
+    public GreenJewel(int x)
+    {
+        level_num = x;
+        GreenfootImage myImage = getImage();
+        int myNewHeight = (int)myImage.getHeight()/15;
+        int myNewWidth = (int)myImage.getWidth()/20;
+        myImage.scale(myNewWidth,myNewHeight);
+        
+    }
     /**
-     * Act - do whatever the YellowJewel wants to do. This method is called whenever
+     * Act - do whatever the BlueJewel wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
+        Actor actor = getOneIntersectingObject(GameAladdin.class);
+        if(actor != null)
+        {
+            incrementScore(level_num);
+            decreaseCount(level_num);
+            removeFromWorld();
+            
+        }      
     }
-    public GreenJewel()
+    public void setlevel(int x)
     {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/15;
-        int myNewWidth = (int)myImage.getWidth()/15;
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
-    }
+        level_num = x;
+    }    
     @Override
-    public void updateScore() {
-    	// TODO Auto-generated method stub
-    	
+    public void updateScore() 
+    {     
+    }  
+    public void incrementScore(int x)
+    {
+        if(x == 0) {
+            PalaceWorld palace = (PalaceWorld)getWorld();
+            palace.aladdin.jewelsCollected++;
+            palace.aladdin.setScoreState(this.getClass().getName());
+        }
+        else if(x == 1) {
+            PalaceWorld2 palace = (PalaceWorld2)getWorld();
+            palace.aladdin.jewelsCollected++;
+            palace.aladdin.setScoreState(this.getClass().getName());
+        }
     }
+    
+    public void removeFromWorld()
+    {
+        getWorld().removeObject(this);
+    }
+    
+    public void decreaseCount(int x)
+    {
+        if(x == 0)
+        { 
+            PalaceWorld palace = (PalaceWorld)getWorld();
+            palace.decrease_jewels();
+        }
+        else if(x == 1)
+        {
+            PalaceWorld2 palace = (PalaceWorld2)getWorld();
+            palace.decrease_jewels(); 
+        }
+    }    
 }

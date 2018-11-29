@@ -14,7 +14,7 @@ public class JewelFactory extends AbstractFactory{
 		if(jewelType.equalsIgnoreCase("BLUE"))
 			return new BlueJewel(level);
 		else if(jewelType.equalsIgnoreCase("GREEN"))
-			return new GreenJewel();
+			return new GreenJewel(level);
 		else if(jewelType.equalsIgnoreCase("PINK"))
 			return new PinkJewel(level);
 		
