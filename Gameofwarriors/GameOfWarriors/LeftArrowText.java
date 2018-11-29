@@ -6,20 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LeftArrowText extends Actor
+public class LeftArrowText extends HelpInstruction
 {
-    GreenfootImage myImage = null;
-    /**
-     * Act - do whatever the Left_arrow wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     public LeftArrowText()
     {
-        myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/3;
-        int myNewWidth = (int)myImage.getWidth()/3;
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
+        super();
     }
     /**
      * Act - do whatever the LeftArrowText wants to do. This method is called whenever

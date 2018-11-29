@@ -2,5 +2,5 @@
 comment0.target=IScoreObserver
 comment1.params=
 comment1.target=void\ updateScore()
-comment1.text=\r\n\ Key\ Event\ to\ Notify\ Observers\ \r\n\ @param\ numKeys\ Number\ of\ Digits\ So\ Far\r\n\ @param\ key\ \ \ \ \ Key/Digit\ Pressed\r\n
+comment1.text=\n\ Key\ Event\ to\ Notify\ Observers\ \n\ @param\ numKeys\ Number\ of\ Digits\ So\ Far\n\ @param\ key\ \ \ \ \ Key/Digit\ Pressed\n
 numComments=2
