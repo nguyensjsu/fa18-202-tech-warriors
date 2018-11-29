@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy1 extends Enemies implements IEnemy
 {
-    private int turnSpeed = 2;
+
     private boolean moveRight = false;
     private int jumpbarWidth = 260;
     int startPos =0;

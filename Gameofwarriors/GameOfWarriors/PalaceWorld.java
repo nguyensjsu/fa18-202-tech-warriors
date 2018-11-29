@@ -37,7 +37,7 @@ public class PalaceWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1153, 800, 1);
-        addObject(aladdin, 94,737);//add aladdin obj to world
+        addObject(aladdin, 94,710);//add aladdin obj to world
         //set lifecount to PalaceWorld
         lifeimg1.setLifeWorld(level_num);
         lifeimg2.setLifeWorld(level_num);
@@ -56,15 +56,21 @@ public class PalaceWorld extends World
         addObject(lifeimg1, 90, 25);
         addObject(lifeimg2, 120, 25);
         addObject(lifeimg3, 150, 26);
-
+        //score 
         addObject(score,270,26); 
-
         aladdin.attach(score);//attach game actor to update on score.     
         aladdin.attach(jewelCollection);//attach game actor to update on score.
         populate();
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
         level.displayLevel();
-  
+
+        //add moving jumpbar to the world
+        addObject(new MovingJumpBar(160), 160, 500);
+        addObject(new MovingJumpBar(240), 240, 240);
+        addObject(new MovingJumpBar(820), 820, 640);
+        addObject(new BottomBar() ,650, 790);
+        //update_jewel_count();
+
         //Game start sound
         //startSound = new GreenfootSound("startgame.mp3");
         //startSound.playLoop();

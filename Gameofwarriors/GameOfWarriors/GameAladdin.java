@@ -11,7 +11,7 @@ public class GameAladdin extends Actor implements IScoreSubject
 {
  
     private int fallSpeed = 0;
-    private int accelaration = 3;
+    private int accelaration = 5;
     private boolean gameStart = true;
     private int jumpStrength=12;
     GreenfootImage myImage = null;
@@ -171,7 +171,6 @@ public class GameAladdin extends Actor implements IScoreSubject
      * Trigger Events to Observers
      */
     public void notifyLifeObservers() {
-        System.out.println(lives.size());
         for (LifeCount obj  : lives)
         {        
             obj.updateLife();

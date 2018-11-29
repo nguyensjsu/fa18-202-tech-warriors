@@ -52,14 +52,14 @@ public class Score extends Actor implements IScoreObserver
            PalaceWorld palace =(PalaceWorld)getWorld();
            jewelName = palace.aladdin.getScoreState();
         
-           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" || jewelName == "BlueJewel")
+           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" || jewelName == "GreenJewel")
               addScoreForJewel();
         }
         else if(level_num == 1){
            PalaceWorld2 palace =(PalaceWorld2)getWorld();
            jewelName = palace.aladdin.getScoreState();
         
-           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" ||  jewelName == "BlueJewel")
+           if(jewelName == "PinkJewel" || jewelName == "BlueJewel" ||  jewelName == "GreenJewel")
               addScoreForJewel();            
         }
     
