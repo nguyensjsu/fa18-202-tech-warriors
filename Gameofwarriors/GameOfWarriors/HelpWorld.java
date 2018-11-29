@@ -23,6 +23,10 @@ public class HelpWorld extends World
         super(1153, 800, 1);
         addObject(aladdin,1045, 588);
         addObject(new Princess(),115, 594);
+        addObject(new LeftArrow(),100, 50);
+        addObject(new RightArrow(),100, 135);
+        addObject(new LeftArrowText(),400, 50);
+        addObject(new RightArrowText(),400, 135);
         //backOption  = new BackOption("Back to Main Menu") ;
         //backCmd = new BackCommand();
         /*addObject(backOption,150,100);
