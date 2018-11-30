@@ -57,7 +57,7 @@ What do I plan to do this week:
 1) Continue implementation of observer pattern. 
 2) Continue implementation of scores/ levels and coins collected.
 
-What blockers do I have: -NA
+What blockers do I have: - NA
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
