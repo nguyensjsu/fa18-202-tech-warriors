@@ -60,4 +60,5 @@ What do I plan to do this week:
 What blockers do I have: -NA
 XP Value :
 Courage : Took a courage to refractor the code to implement template design pattern and abstract facotry pattern so that future changes will be implemented easily.
+
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
