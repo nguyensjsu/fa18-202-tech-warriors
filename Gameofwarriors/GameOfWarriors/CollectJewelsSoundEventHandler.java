@@ -9,6 +9,8 @@ import greenfoot.*;
 public class CollectJewelsSoundEventHandler implements IEventSoundHandler 
 {
     IEventSoundHandler chain;
+    GreenfootSound collectjewels = new GreenfootSound("collectjewels.wav");
+    GreenfootSound collectlifeline = new GreenfootSound("collectlifeline.wav");
    /**
      * Handles sound event for various actions
      * @param event action
@@ -16,14 +18,10 @@ public class CollectJewelsSoundEventHandler implements IEventSoundHandler
     public void handleSoundEvent(String action){
         
         if(action.equalsIgnoreCase(ActionEnum.COLLECTJEWELS.toString())){
-            GreenfootSound sound = new GreenfootSound("collectjewels.wav");
-            sound.setVolume(2);
-            sound.play();
+            collectjewels.play();
             
         }else if(action.equalsIgnoreCase(ActionEnum.COLLECTLIFELINE.toString())){
-            GreenfootSound sound = new GreenfootSound("collectlifeline.wav");
-            sound.setVolume(2);
-            sound.play();
+            collectlifeline.play();
             
         }else{
             if(chain!=null){

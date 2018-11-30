@@ -9,6 +9,8 @@ import greenfoot.*;
 public class GameOverOrWonSoundEventHandler implements IEventSoundHandler 
 {
     IEventSoundHandler chain;
+    GreenfootSound gameover = new GreenfootSound("gameover.wav");
+    GreenfootSound win = new GreenfootSound("won.wav");
    /**
      * Handles sound event for various actions
      * @param event action
@@ -16,15 +18,9 @@ public class GameOverOrWonSoundEventHandler implements IEventSoundHandler
     public void handleSoundEvent(String action){
         
         if(action.equalsIgnoreCase(ActionEnum.GAMEOVER.toString())){
-            GreenfootSound sound = new GreenfootSound("gameover.wav");
-            sound.setVolume(2);
-            sound.play();
-            
+           gameover.play();   
         }else if(action.equalsIgnoreCase(ActionEnum.WON.toString())){
-            GreenfootSound sound = new GreenfootSound("won.wav");
-            sound.setVolume(2);
-            sound.play();
-            
+            win.play();  
         }
         else{
             if(chain!=null){

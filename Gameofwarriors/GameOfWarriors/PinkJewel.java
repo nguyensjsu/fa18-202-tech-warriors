@@ -10,7 +10,8 @@ public class PinkJewel extends Jewel implements IJewel
 {
 
     int level_num;
-
+    //Sound Event
+    private EventSoundClient client = new EventSoundClient();
     /**
      * Act - do whatever the Jewel2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -59,11 +60,13 @@ public class PinkJewel extends Jewel implements IJewel
             PalaceWorld palace = (PalaceWorld)getWorld();
             palace.aladdin.jewelsCollected++;
             palace.aladdin.setScoreState(this.getClass().getName());
+            client.handleSoundEvent("collectjewels");
         }
         else if(level_num == 1) {
             PalaceWorld2 palace = (PalaceWorld2)getWorld();
             palace.aladdin.jewelsCollected++;
             palace.aladdin.setScoreState(this.getClass().getName());
+            client.handleSoundEvent("collectjewels");
         }
     }
     /**

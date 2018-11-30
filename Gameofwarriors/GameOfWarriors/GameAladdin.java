@@ -23,13 +23,14 @@ public class GameAladdin extends Actor implements IScoreSubject
     private ArrayList<LifeCount> lives = new ArrayList<LifeCount>() ;
     public String aladdinState ;
     //Sound Event
-    public EventSoundClient client = new EventSoundClient();
+    private EventSoundClient client = new EventSoundClient();
     public GameAladdin()
     {
         myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/4;
         int myNewWidth = (int)myImage.getWidth()/4;
         myImage.scale(myNewWidth,myNewHeight);// Add your action code here.
+        client.handleSoundEvent("background");
     }
     /**
      * Act - do whatever the GameAladdin wants to do. This method is called whenever
@@ -42,8 +43,7 @@ public class GameAladdin extends Actor implements IScoreSubject
             //Greenfoot.stop();    
         }*/
         if(getOneIntersectingObject(Enemies.class)!= null){
-            //Sound Event
-            client.handleSoundEvent("hitenemy");
+            
             setLocation(94,710);
             die();
             //Greenfoot.stop();    

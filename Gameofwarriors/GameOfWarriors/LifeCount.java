@@ -11,7 +11,8 @@ public class LifeCount extends Life
     public int lifeCount = 3;
     public String state= "";
     public int level;
-
+    //Sound Event
+    private EventSoundClient client = new EventSoundClient();
     /**
      * Act - do whatever the LifeImage wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -70,6 +71,8 @@ public class LifeCount extends Life
                 lifeCount--;
                 getWorld().removeObjects(getWorld().getObjectsAt( 90, 25,LifeCount.class));             
                 world.addObject(new GameOver(), world.getWidth()/2, world.getHeight()/2);
+                client.handleSoundEvent("stop");
+                client.handleSoundEvent("gameover");
                 Greenfoot.stop();
             }  
     }

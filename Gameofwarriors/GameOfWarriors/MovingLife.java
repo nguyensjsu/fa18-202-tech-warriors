@@ -23,8 +23,7 @@ public class MovingLife extends Life
         Actor actor = getOneIntersectingObject(GameAladdin.class);
         if (actor != null) 
         {
-            //Sound event
-            client.handleSoundEvent("collectlifeline");
+            
             incrementScore();
             removefromWorld();
         }
@@ -33,6 +32,8 @@ public class MovingLife extends Life
     public void incrementScore()
     {
         GameAladdin aladdin = (GameAladdin)getWorld().getObjects(GameAladdin.class).get(0);
+        //Sound event
+        client.handleSoundEvent("collectlifeline");
         aladdin.addNewLife();
     }
 

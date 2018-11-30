@@ -9,15 +9,17 @@ import greenfoot.*;
 public class BackgroundSoundEventHandler implements IEventSoundHandler 
 {
     IEventSoundHandler chain;
+    static GreenfootSound sound = new GreenfootSound("background.mp3");
    /**
      * Handles sound event for various actions
      * @param event action
      */
     public void handleSoundEvent(String action){
-        
-        if(action.equalsIgnoreCase(ActionEnum.BACKGROUND.toString())){
-            GreenfootSound sound = new GreenfootSound("startgame.mp3");
-            sound.setVolume(2);
+       
+       if(action.equalsIgnoreCase("stop")){
+           sound.stop();
+       }  
+        else if(action.equalsIgnoreCase(ActionEnum.BACKGROUND.toString())){
             sound.play();
             
         }else{

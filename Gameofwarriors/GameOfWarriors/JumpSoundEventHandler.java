@@ -9,6 +9,7 @@ import greenfoot.*;
 public class JumpSoundEventHandler implements IEventSoundHandler 
 {
     IEventSoundHandler chain;
+    GreenfootSound sound = new GreenfootSound("jump.wav");
    /**
      * Handles sound event for various actions
      * @param event action
@@ -16,8 +17,6 @@ public class JumpSoundEventHandler implements IEventSoundHandler
     public void handleSoundEvent(String action){
         
         if(action.equalsIgnoreCase(ActionEnum.JUMP.toString())){
-            GreenfootSound sound = new GreenfootSound("jump.wav");
-            sound.setVolume(2);
             sound.play();
         }else{
             if(chain!=null){

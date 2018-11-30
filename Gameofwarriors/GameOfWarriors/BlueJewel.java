@@ -9,7 +9,8 @@ public class BlueJewel extends Jewel implements IJewel
 {
 
     int level_num;
-
+     //Sound Event
+    private EventSoundClient client = new EventSoundClient();
     public BlueJewel(int x)
     {
         level_num = x;
@@ -55,11 +56,13 @@ public class BlueJewel extends Jewel implements IJewel
             PalaceWorld palace = (PalaceWorld)getWorld();
             palace.aladdin.jewelsCollected++;
             palace.aladdin.setScoreState(this.getClass().getName());
+            client.handleSoundEvent("collectjewels");
         }
         else if(level_num == 1) {
             PalaceWorld2 palace = (PalaceWorld2)getWorld();
             palace.aladdin.jewelsCollected++;
             palace.aladdin.setScoreState(this.getClass().getName());
+            client.handleSoundEvent("collectjewels");
         }
     }
     /**
