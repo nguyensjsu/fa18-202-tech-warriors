@@ -22,6 +22,8 @@ public class GameAladdin extends Actor implements IScoreSubject
     private ArrayList<IScoreObserver> scoreObserver = new ArrayList<IScoreObserver>() ;
     private ArrayList<LifeCount> lives = new ArrayList<LifeCount>() ;
     public String aladdinState ;
+    //Sound Event
+    public EventSoundClient client = new EventSoundClient();
     public GameAladdin()
     {
         myImage = getImage();
@@ -40,6 +42,8 @@ public class GameAladdin extends Actor implements IScoreSubject
             //Greenfoot.stop();    
         }*/
         if(getOneIntersectingObject(Enemies.class)!= null){
+            //Sound Event
+            client.handleSoundEvent("hitenemy");
             setLocation(94,710);
             die();
             //Greenfoot.stop();    
@@ -60,6 +64,8 @@ public class GameAladdin extends Actor implements IScoreSubject
          }
          if(Greenfoot.isKeyDown("space"))
          {
+            //Sound Event
+            client.handleSoundEvent("jump");
              jump();
          }
     }

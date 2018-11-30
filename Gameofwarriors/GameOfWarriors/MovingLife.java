@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MovingLife extends Life
 {
+    //Sound Event
+    public EventSoundClient client = new EventSoundClient();
     /**
      * Act - do whatever the MovingLife wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,6 +23,8 @@ public class MovingLife extends Life
         Actor actor = getOneIntersectingObject(GameAladdin.class);
         if (actor != null) 
         {
+            //Sound event
+            client.handleSoundEvent("collectlifeline");
             incrementScore();
             removefromWorld();
         }

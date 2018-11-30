@@ -6,8 +6,8 @@
  */
 enum ActionEnum  
 {
-   JUMP("jump"), FALL("fall"), HITENEMY("hitenemy"), COLLECTCOINS("collectcoins"),  
-   GAMEOVER("gameover"), WON("won");
+   BACKGROUND("background"),JUMP("jump"), FALL("fall"), HITENEMY("hitenemy"), COLLECTJEWELS("collectjewels"),  
+   COLLECTLIFELINE("collectlifeline"),GAMEOVER("gameover"), WON("won");
    
    private String action; 
   
