@@ -25,6 +25,7 @@ Create use case diagram.
 What blockers do I have: -NA
 
 XP Value chosen: Communication
+
 In the first sprint, we got to learn about each other's interests and skillsets, and established the basis of our daily communication. I took the initiative of making sure that each of us express our points of view without any hesitation. To facilitate this, watsapp group was created, video call with screen-sharing option was used, telephonic calls, and ofcourse the in-person meetings were scheduled.
 Setting up the communication schedule and medium proved to be quite effective in our case. We brainstormed and invested quality time in exploring greenfoot tool and finalizing the game concept.
 
@@ -53,6 +54,7 @@ Start implementation of identified design pattern.
 What blockers do I have: -NA
 
 XP Value chosen: Communication
+
 In Sprint2, we segregated the individual components and started working on individual deliverables. I created the initial framework and communicated to my team to start working on individual deliverables. I also took initiative to drive the daily standups and made sure that we learn about each other's progress and help each other in addressing roadblocks(if any). Team discussed with each other on design pattern selections. By communicating effectively, it was observed that all the commitments were discussed and delivered by the team.
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
@@ -76,6 +78,7 @@ Implement command patterns for going back to main screen from start menu options
 What blockers do I have: -NA
 
 XP Value chosen: Communication
+
 By end of Sprint3, communication was seamless within the team and without much effort. We integrated our individual changes. We communicated and resolved minor bugs which was discovered along the process. Team took great initiative in dividing the tasks. Learning and sharing was done effectively by having peer reviews of the designs and implementations. We also did a retrospective meet to appreciate each other's efforts and to analyse the things which we could have done better.
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
@@ -101,4 +104,5 @@ Contribute in making the Ad Video of our game.
 What blockers do I have: -NA
 
 XP Value chosen: Communication
+
 Towards the end of sprint4, the process was so streamlined that the XP value of communication flowed naturally within the team. Team automatically divided the pending tasks in a balanced way making sure that nobody is over-worked. We followed a mixed approach of XP and agile which helped us in collaborating effectively. We observed that timely communication kept team motivated and helped us in performing optimally. Now we understand how communication fits in as XP value and forms the pillar for marking success of a project.
