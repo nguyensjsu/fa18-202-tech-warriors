@@ -59,7 +59,26 @@ What do I plan to do this week:
 
 What blockers do I have: -NA
 
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Sprint#2 - Week 2 - 11/23 - 11/30
+
+What I did since the last daily scrum:
+
+1)Implented observer pattern for updating and displaying score, lives and jevels collected on the screen. 
+2)Indentified abstract factory pattern for creating jewels and enemies. 
+3)Identified template pattern for different types of jewels.
+
+What do I plan to do this week:
+1)Implementation of Abstract Facory pattern for jewels and enemies. 
+2)Implementation of template pattern for different types of jewels. 
+3)Resolve all minor bugs in the game and make it smooth. i.e. Aladding life, jump
+
+
+What blockers do I have: - NA
+
 XP Value :
 Courage : Took a courage to refractor the code to implement template design pattern and abstract facotry pattern so that future changes will be implemented easily.
 
--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+
