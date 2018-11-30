@@ -4,6 +4,8 @@ Team Member Name
 
 Shalu Rani
 
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
 Sprint#1 - Week 1 - 11/2 - 11/8
 
 What I did since the last daily scrum: NA
