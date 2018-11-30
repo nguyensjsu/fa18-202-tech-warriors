@@ -39,7 +39,8 @@ public class GameAladdin extends Actor implements IScoreSubject
     public void act() 
     {
         if(getOneIntersectingObject(Enemies.class)!= null){
-            
+             //Sound Event
+            client.handleSoundEvent("hitenemy");
             setLocation(94,710);
             die();  
         }

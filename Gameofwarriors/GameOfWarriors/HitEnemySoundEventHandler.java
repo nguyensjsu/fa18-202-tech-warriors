@@ -17,8 +17,7 @@ public class HitEnemySoundEventHandler implements IEventSoundHandler
         
         if(action.equalsIgnoreCase(ActionEnum.HITENEMY.toString())){
            GreenfootSound sound = new GreenfootSound("hitenemy.wav");
-            sound.setVolume(2);
-            sound.play();
+           sound.play();
             
         }else{
             if(chain!=null){
