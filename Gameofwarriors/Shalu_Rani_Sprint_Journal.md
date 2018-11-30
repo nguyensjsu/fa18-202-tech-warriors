@@ -25,7 +25,7 @@ What blockers do I have: -NA
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
-Sprint#2 - Week 1 - 11/9 - 11/15
+Sprint#2 - Week 2 - 11/9 - 11/15
 
 What I did since the last daily scrum:
 
@@ -49,7 +49,7 @@ What blockers do I have: -NA
 
 -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
-Sprint#3 - Week 1 - 11/16 - 11/22
+Sprint#3 - Week 3 - 11/16 - 11/22
 
 What I did since the last daily scrum:
 
@@ -66,3 +66,26 @@ Start work for handling actor movements and states.
 Implement command patterns for going back to main screen from start menu options.
 
 What blockers do I have: -NA
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Sprint#4 - Week 4 - 11/23 - 11/29
+
+What I did since the last daily scrum:
+
+Implemented command pattern for game levels and help instructions.
+
+Contributed in enemy movement logic.
+
+What do I plan to do this week:
+
+Contribute in creation of all UML diagrams.
+
+Create class diagram for the design pattern implemented.
+
+Contribute in making the project presentation.
+
+Contribute in making the Ad Video of our game.
+
+What blockers do I have: -NA
+
