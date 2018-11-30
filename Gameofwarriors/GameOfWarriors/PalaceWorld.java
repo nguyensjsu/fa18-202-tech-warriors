@@ -43,11 +43,11 @@ public class PalaceWorld extends World
         lifeimg2.setLifeWorld(level_num);
         lifeimg3.setLifeWorld(level_num);
         //add enemies
-        addObject((Enemies)enFactory.getEnemy("ENEMY1" , 365), 365, 540);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1", 1005), 1005, 558);
-        addObject((Enemies)enFactory.getEnemy("ENEMY2", 600), 600, 80);
-        addObject((Enemies)enFactory.getEnemy("ENEMY2", 470), 470, 280);
-        addObject((Enemies)enFactory.getEnemy("ENEMY2", 700), 700, 442);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1" , 420), 420, 540);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 955), 955, 560);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 600), 600, 85);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 470), 470, 245);
+        //addObject((Enemies)enFactory.getEnemy("ENEMY2", 700), 700, 442);
         addObject((Enemies)enFactory.getEnemy("ENEMY1", 940), 940, 240);
         addObject(life1, 652, 433);//moving life for collection
         //score board
@@ -65,9 +65,9 @@ public class PalaceWorld extends World
         level.displayLevel();
 
         //add moving jumpbar to the world
-        addObject(new MovingJumpBar(160), 160, 500);
-        addObject(new MovingJumpBar(240), 240, 240);
-        addObject(new MovingJumpBar(820), 820, 640);
+        addObject(new MovingJumpBar(300), 300, 450);
+        //addObject(new MovingJumpBar(250), 250, 240);
+        addObject(new MovingJumpBar(1050), 1050, 130);
         addObject(new BottomBar() ,650, 790);
         //update_jewel_count();
 

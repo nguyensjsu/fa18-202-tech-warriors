@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MovingJumpBar extends JumpBar
 {
     private boolean moveRight = false;
-    private int jumpbarWidth = 200;
+    private int jumpbarWidth = 350;
     int startPos =0;
     /**
      * Act - do whatever the MovingJumpBar wants to do. This method is called whenever
