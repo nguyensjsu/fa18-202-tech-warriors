@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=JumpEventHandler
-comment0.text=\n\ Chain\ of\ responsibility\ pattern\n\ Handles\ jump\ sound\ event\n\ \n\ @Priyanka.Singhal\n\ @V1.0\n
+comment0.text=\r\n\ Chain\ of\ responsibility\ pattern\r\n\ Handles\ jump\ sound\ event\r\n\ \r\n\ @Priyanka.Singhal\r\n\ @V1.0\r\n
 comment1.params=action
 comment1.target=void\ handleSoundEvent(java.lang.String)
-comment1.text=\n\ Handles\ sound\ event\ for\ various\ actions\n\ @param\ event\ action\n
+comment1.text=\r\n\ Handles\ sound\ event\ for\ various\ actions\r\n\ @param\ event\ action\r\n
 comment2.params=next
 comment2.target=void\ setNext(IEventSoundHandler)
-comment2.text=\n\ Sets\ the\ chain\ of\ responsibility\ to\ different\ handler\n\ @param\ next\ sound\ handler\n
+comment2.text=\r\n\ Sets\ the\ chain\ of\ responsibility\ to\ different\ handler\r\n\ @param\ next\ sound\ handler\r\n
 numComments=3

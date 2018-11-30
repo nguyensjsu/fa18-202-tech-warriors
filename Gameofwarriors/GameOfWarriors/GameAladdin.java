@@ -11,9 +11,9 @@ public class GameAladdin extends Actor implements IScoreSubject
 {
  
     private int fallSpeed = 0;
-    private int accelaration = 5;
+    private int accelaration = 1;
     private boolean gameStart = true;
-    private int jumpStrength=12;
+    private int jumpStrength=20;
     GreenfootImage myImage = null;
     int remainingLife = 0;
     int jewelsCollected = 0;
@@ -38,19 +38,14 @@ public class GameAladdin extends Actor implements IScoreSubject
      */
     public void act() 
     {
-        /*if(getOneObjectAtOffset(0,0,Enemies.class)!= null){
-            die();
-            //Greenfoot.stop();    
-        }*/
         if(getOneIntersectingObject(Enemies.class)!= null){
             
             setLocation(94,710);
-            die();
-            //Greenfoot.stop();    
+            die();  
         }
 
         checkKeys();
-        checkFall();
+        fall();
     }    
     public void checkKeys()
     {
@@ -62,17 +57,41 @@ public class GameAladdin extends Actor implements IScoreSubject
          {
              moveLeft();
          }
-         if(Greenfoot.isKeyDown("space"))
+         if(Greenfoot.isKeyDown("space") && onFlatGround())
          {
             //Sound Event
             client.handleSoundEvent("jump");
-             jump();
+            jump();
          }
     }
-    public boolean onJumpBar()
+    public boolean onFlatGround()
     {
-        Actor fallObj = getOneObjectAtOffset(0, this.getImage().getHeight()/2, JumpBar.class);
-        return fallObj!=null;       
+        /*Actor fallObj = getOneObjectAtOffset(0, this.getImage().getHeight()/2, JumpBar.class);
+        return fallObj!=null;*/
+
+        boolean onFlatGround = false;
+        if(getY() > 710){
+           onFlatGround = true;
+        }
+        int imagewidth = getImage().getWidth();
+        int imageheight = getImage().getHeight();
+        if(getOneObjectAtOffset(imagewidth/-2, imageheight/2, JumpBar.class) != null
+            || getOneObjectAtOffset(imagewidth/2, imageheight/2, JumpBar.class) != null)
+            onFlatGround = true;
+        return onFlatGround;       
+    }
+    public boolean bumpHead()
+    {
+        /*Actor fallObj = getOneObjectAtOffset(0, this.getImage().getHeight()/2, JumpBar.class);
+        return fallObj!=null;*/
+
+        boolean bumpHead = false;
+        int imagewidth = getImage().getWidth();
+        int imageheight = getImage().getHeight();
+        if(getOneObjectAtOffset(imagewidth/-2, imageheight/-2, JumpBar.class) != null
+            || getOneObjectAtOffset(imagewidth/2, imageheight/-2, JumpBar.class) != null)
+            bumpHead = true;
+        return bumpHead;       
     }
     public void moveRight()
     {
@@ -92,39 +111,33 @@ public class GameAladdin extends Actor implements IScoreSubject
     } 
     public void fall()
     {
-        /*if(gameStart)
-        {
-            setLocation(getX(), getY());
-            gameStart = false;
-            
-        }
-        else
-        {
-            
-            fallSpeed = fallSpeed+accelaration;
-            setLocation(getX(), getY()+fallSpeed);
-        }*/
-
-        fallSpeed = fallSpeed+accelaration;
+        /*fallSpeed = fallSpeed+accelaration;
         //prevent aladdin from going outside of world
         if(getY()+fallSpeed > 710)
            setLocation(getX(),710);
         else if(getY()+fallSpeed < getImage().getHeight())
            setLocation(getX(),getImage().getHeight());
         else
-           setLocation(getX(), getY()+fallSpeed);
+           setLocation(getX(), getY()+fallSpeed);*/
+        setLocation(getX(), getY() + fallSpeed);
+        if(onFlatGround()) {
+           fallSpeed = 0;
+        }
+        else if(bumpHead() && fallSpeed < 0) fallSpeed = 0;
+        else fallSpeed += accelaration;
     }
-    public void checkFall()
+    /*public void checkFall()
     {
         if(onJumpBar())
             fallSpeed=0;
         else
             fall();
-    }
+    }*/
     public void jump()
     {
+        /*fallSpeed = -jumpStrength;
+        fall();*/
         fallSpeed = -jumpStrength;
-        fall();
     }
         /**
      * Add Observer to Subscribers List
