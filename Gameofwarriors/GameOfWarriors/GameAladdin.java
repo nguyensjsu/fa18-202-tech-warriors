@@ -69,20 +69,24 @@ public class GameAladdin extends Actor implements IScoreSubject
         return fallObj!=null;       
     }
     public void moveRight()
-    {     
-        move(5);     
+    {
+        move(5);
+        //prevent aladdin from going outside of world
+        if(getX() > getWorld().getWidth() - getImage().getWidth())
+           setLocation(getWorld().getWidth() - getImage().getWidth(), getY());     
         setImage(myImage);
     }
     public void moveLeft()
     {
-        move(-5);  
+        move(-5);
+        //prevent aladdin from going outside of world
+        if(getX() < getImage().getWidth())
+           setLocation(getImage().getWidth(), getY());  
         setImage("alladinwidsordleft.png");
     } 
     public void fall()
     {
-        
-
-        if(gameStart)
+        /*if(gameStart)
         {
             setLocation(getX(), getY());
             gameStart = false;
@@ -93,7 +97,16 @@ public class GameAladdin extends Actor implements IScoreSubject
             
             fallSpeed = fallSpeed+accelaration;
             setLocation(getX(), getY()+fallSpeed);
-        }
+        }*/
+
+        fallSpeed = fallSpeed+accelaration;
+        //prevent aladdin from going outside of world
+        if(getY()+fallSpeed > 710)
+           setLocation(getX(),710);
+        else if(getY()+fallSpeed < getImage().getHeight())
+           setLocation(getX(),getImage().getHeight());
+        else
+           setLocation(getX(), getY()+fallSpeed);
     }
     public void checkFall()
     {

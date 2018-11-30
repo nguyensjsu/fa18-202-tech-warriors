@@ -21,6 +21,6 @@ public class BottomBar extends JumpBar
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight();
         int myNewWidth = (int)myImage.getWidth()*5/2;
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.   
+        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.  
     }     
 }
