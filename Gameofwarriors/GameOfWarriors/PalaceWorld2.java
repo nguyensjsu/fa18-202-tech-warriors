@@ -96,14 +96,20 @@ public class PalaceWorld2 extends World
         aladdin.attach(jewelCollection);//attach game actor to update on score.
         populate();
         aladdin.attachLifeObserver(lifeimg1);//attach game actor to update on score.
-        level.displayLevel();        
+        level.displayLevel();
+        
+        //add moving jumpbar to the world
+        addObject(new MovingJumpBar(600), 600, 280);
+        addObject(new MovingJumpBar(450), 450, 280);
+        addObject(new MovingJumpBar(1050), 1050, 450);
     }
 
     public void populate()
     {
-        addObject((Enemies)enFactory.getEnemy("ENEMY1", 437), 437, 500);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1", 665), 665, 415);
-        addObject((Enemies)enFactory.getEnemy("ENEMY1", 882), 882, 240);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 445), 445, 495);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 675), 675, 410);
+        addObject((Enemies)enFactory.getEnemy("ENEMY1", 870), 870, 245);
+        addObject((Enemies)enFactory.getEnemy("ENEMY2", 250), 250, 300);
         for(int i = 0 ; i< 7 ; i++)
         {
             addObject((Jewel)jFactory.getJewel("BLUE", level_num), Greenfoot.getRandomNumber (1100) + 30,Greenfoot.getRandomNumber (700) + 50);

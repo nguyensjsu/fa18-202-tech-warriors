@@ -28,10 +28,12 @@ public class Level1Strategy extends Actor implements IGameLevelStrategy
 
     public void display()
     {
-        world.addObject(new BigJumpBar(), 199, 613);
-        world.addObject(new BigJumpBar(), 387, 549);
-        world.addObject(new BigJumpBar(), 618, 464);
-        world.addObject(new BigJumpBar(), 830, 294);
-        world.addObject(new BigJumpBar(), 966, 294);
+        world.addObject(new BigJumpBar(), 200, 610);
+        world.addObject(new BigJumpBar(), 385, 550);
+        world.addObject(new BigJumpBar(), 620, 464);
+        world.addObject(new BigJumpBar(), 800, 300);
+        world.addObject(new BigJumpBar(), 950, 180);
+        world.addObject(new BigJumpBar(), 900, 600);
+        world.addObject(new BigJumpBar(), 200, 350);
     }    
 }

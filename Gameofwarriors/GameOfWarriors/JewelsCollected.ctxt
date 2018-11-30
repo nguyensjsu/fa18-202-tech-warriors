@@ -1,15 +1,15 @@
 #BlueJ class context
 comment0.target=JewelsCollected
-comment0.text=\r\n\ To\ Display\ Jewels\ Collected\ by\ Aladdin\r\n\ @jainsupriya\r\n\ v1.0\r\n
+comment0.text=\n\ To\ Display\ Jewels\ Collected\ by\ Aladdin\n\ @jainsupriya\n\ v1.0\n
 comment1.params=subject
 comment1.target=JewelsCollected(GameAladdin)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Jewels\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Jewels\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment3.params=
 comment3.target=void\ updateScore()
-comment3.text=\r\n\ Update\ no\ of\ jewels\ on\ receiving\ notification\ from\ aladdin\r\n
+comment3.text=\n\ Update\ no\ of\ jewels\ on\ receiving\ notification\ from\ aladdin\n
 comment4.params=
 comment4.target=void\ eventUpdate()
-comment4.text=\r\n\ display\ jewels\ count\ on\ the\ screen\ \r\n
+comment4.text=\n\ display\ jewels\ count\ on\ the\ screen\ \n
 numComments=5
