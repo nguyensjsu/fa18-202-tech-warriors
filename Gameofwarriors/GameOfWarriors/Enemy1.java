@@ -17,12 +17,6 @@ public class Enemy1 extends Enemies implements IEnemy
     {
         startPos = pos;
     }
-      
-    /**    
-    public Enemy1()
-    {
-    }
-      
     /**
      * Act - do whatever the Enemy1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -101,8 +95,6 @@ public class Enemy1 extends Enemies implements IEnemy
     }    
     
     @Override
-    public void killAlladin() {
-    	// TODO Auto-generated method stub
-    	
+    public void killAlladin() {	
     }
 }

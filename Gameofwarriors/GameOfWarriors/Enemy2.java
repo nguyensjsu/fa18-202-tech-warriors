@@ -48,8 +48,7 @@ public class Enemy2 extends Enemies implements IEnemy
     }  
     @Override
     public void killAlladin() {
-    	// TODO Auto-generated method stub
-    	
+
     }
     
 }

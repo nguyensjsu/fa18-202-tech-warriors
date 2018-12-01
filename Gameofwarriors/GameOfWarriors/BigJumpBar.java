@@ -21,6 +21,6 @@ public class BigJumpBar extends JumpBar
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight();
         int myNewWidth = (int)myImage.getWidth();
-        myImage.scale(myNewWidth,myNewHeight);// Add your action code here.           
+        myImage.scale(myNewWidth,myNewHeight);         
     }
 }

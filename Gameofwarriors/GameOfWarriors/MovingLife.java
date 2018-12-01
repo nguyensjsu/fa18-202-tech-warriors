@@ -44,10 +44,7 @@ public class MovingLife extends Life
     {
         if(Greenfoot.getRandomNumber (100)<10)
             turn(Greenfoot.getRandomNumber(40)-20);
-    }
-     /**
-     * if reach at edge of the world turn little bit
-     */   
+    }  
     public void turnAtEdge()
     {
        if(isAtEdge())

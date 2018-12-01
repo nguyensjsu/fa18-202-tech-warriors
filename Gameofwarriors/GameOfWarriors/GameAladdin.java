@@ -181,9 +181,9 @@ public class GameAladdin extends Actor implements IScoreSubject
         setAladdinState("gotLife");
         
     }
-    public void setAladdinState(String marioStatus)
+    public void setAladdinState(String alladinStatus)
     {
-        aladdinState = marioStatus;
+        aladdinState = alladinStatus;
         notifyLifeObservers();
         
     }
