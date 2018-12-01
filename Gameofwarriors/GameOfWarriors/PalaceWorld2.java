@@ -123,7 +123,9 @@ public class PalaceWorld2 extends World
         if(jewelsonscreen > 0)
             jewelsonscreen--;
         if(jewelsonscreen == 0){
-
+            GameSuccess success = new GameSuccess();
+            addObject(success, getWidth()/2, getHeight()/2);
+            Greenfoot.stop();
         }
     }
 
