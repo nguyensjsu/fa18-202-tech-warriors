@@ -74,6 +74,7 @@ public class PalaceWorld2 extends World
         this.life1 = life1;
         this.score = score;
         this.jewelCollection = jewelCollection;
+        jewelsonscreen = 14;
         this.level = level;
         level.setLevel(level_num, this);
         startup();
@@ -125,6 +126,7 @@ public class PalaceWorld2 extends World
         if(jewelsonscreen == 0){
             GameSuccess success = new GameSuccess();
             addObject(success, getWidth()/2, getHeight()/2);
+            addObject(new WinText(), getWidth()/6, getHeight()/6);
             Greenfoot.stop();
         }
     }
